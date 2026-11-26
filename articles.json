@@ -1,333 +1,919 @@
 [
   {
+    "title": "I Mapped 772 AI Agent Skill Repos on GitHub. Here's What Was Actually in Them",
+    "url": "https://dev.to/oluseyej/i-mapped-772-ai-agent-skill-repos-on-github-heres-what-was-actually-in-them-jpn",
+    "platform": "Dev.to",
+    "tags": [
+      "AI Agents",
+      "Web Scraping",
+      "Data"
+    ],
+    "excerpt": "How I used Spidra Map to discover, clean and verify 772 agent skill repositories, built Skill Bank around them, and what the data showed.",
+    "featured": 1,
+    "date": "2026-11",
+    "topics": [
+      "Agents & RAG",
+      "Data & SQL",
+      "Dev tools & APIs"
+    ]
+  },
+  {
     "title": "Mistral 3: Inside the Model Family, Benchmarks & Real-World Testing",
     "url": "https://www.datacamp.com/blog/mistral-3",
     "platform": "DataCamp",
-    "tags": ["LLMs", "AI", "Benchmarks"],
+    "tags": [
+      "LLMs",
+      "AI",
+      "Benchmarks"
+    ],
     "excerpt": "In-depth coverage of the full Mistral 3 family — Large 3, Ministral 14B, 8B, and 3B. Covers architecture, benchmark comparisons, multimodal testing, and enterprise use cases.",
-    "featured": true
+    "featured": 2,
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI",
+      "Machine Learning"
+    ]
   },
   {
     "title": "Mistral Le Chat: Europe's Answer to ChatGPT",
     "url": "https://www.datacamp.com/blog/mistral-le-chat",
     "platform": "DataCamp",
-    "tags": ["Mistral", "AI Assistant"],
-    "excerpt": "Coverage of Mistral's AI assistant — fast responses, multilingual support, and GDPR compliance for European teams."
+    "tags": [
+      "Mistral",
+      "AI Assistant"
+    ],
+    "excerpt": "Coverage of Mistral's AI assistant — fast responses, multilingual support, and GDPR compliance for European teams.",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI"
+    ]
   },
   {
     "title": "Mistral Vibe 2.0: The Terminal-Based AI Coding Agent",
     "url": "https://www.datacamp.com/blog/mistral-vibe-2-0",
     "platform": "DataCamp",
-    "tags": ["AI Agents", "Coding"],
-    "excerpt": "Guide to Mistral's terminal-based agentic coding tool — capabilities, use cases, and developer workflows."
+    "tags": [
+      "AI Agents",
+      "Coding"
+    ],
+    "excerpt": "Guide to Mistral's terminal-based agentic coding tool — capabilities, use cases, and developer workflows.",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI"
+    ]
   },
   {
     "title": "RAG Frameworks You Should Know: Open-Source Tools for Smarter AI",
     "url": "https://www.datacamp.com/blog/rag-framework",
     "platform": "DataCamp",
-    "tags": ["RAG", "LLMs", "Open Source"],
-    "excerpt": "Comparison of open-source RAG frameworks for building AI applications with external data sources."
+    "tags": [
+      "RAG",
+      "LLMs",
+      "Open Source"
+    ],
+    "excerpt": "Comparison of open-source RAG frameworks for building AI applications with external data sources.",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI",
+      "Data & SQL"
+    ]
   },
   {
     "title": "What is Reverse ETL? A Helpful Guide",
     "url": "https://www.datacamp.com/blog/reverse-etl",
     "platform": "DataCamp",
-    "tags": ["Data Engineering", "ETL"],
-    "excerpt": "Explains how reverse ETL moves warehouse data into operational tools like CRMs and marketing platforms."
+    "tags": [
+      "Data Engineering",
+      "ETL"
+    ],
+    "excerpt": "Explains how reverse ETL moves warehouse data into operational tools like CRMs and marketing platforms.",
+    "topics": [
+      "Data & SQL"
+    ]
   },
   {
     "title": "What Is Business Intelligence? All the Basics Covered",
     "url": "https://www.datacamp.com/blog/what-is-business-intelligence",
     "platform": "DataCamp",
-    "tags": ["BI", "Data Analysis"],
-    "excerpt": "Comprehensive introduction to BI — covering collection, analysis, visualization, and modern BI platforms."
+    "tags": [
+      "BI",
+      "Data Analysis"
+    ],
+    "excerpt": "Comprehensive introduction to BI — covering collection, analysis, visualization, and modern BI platforms.",
+    "topics": [
+      "Data & SQL"
+    ]
   },
   {
     "title": "Git Subtree Explained: A Practical Guide with Examples",
     "url": "https://www.datacamp.com/tutorial/git-subtree",
     "platform": "DataCamp",
-    "tags": ["Git", "DevTools"],
-    "excerpt": "Step-by-step tutorial on using Git Subtree for modular repository management and dependency workflows."
+    "tags": [
+      "Git",
+      "DevTools"
+    ],
+    "excerpt": "Step-by-step tutorial on using Git Subtree for modular repository management and dependency workflows.",
+    "topics": [
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "Git Pull: Keeping Your Local Repository Up to Date",
     "url": "https://www.datacamp.com/tutorial/git-pull",
     "platform": "DataCamp",
-    "tags": ["Git", "Version Control"],
-    "excerpt": "Tutorial on git pull workflows, remote tracking, and keeping local repos synchronized with the team."
+    "tags": [
+      "Git",
+      "Version Control"
+    ],
+    "excerpt": "Tutorial on git pull workflows, remote tracking, and keeping local repos synchronized with the team.",
+    "topics": [
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "Understanding SQL Transactions: A Comprehensive Guide",
     "url": "https://www.datacamp.com/tutorial/sql-transactions",
     "platform": "DataCamp",
-    "tags": ["SQL", "Databases"],
-    "excerpt": "Detailed guide to SQL transactions — ACID properties, commit/rollback patterns, and concurrency control."
+    "tags": [
+      "SQL",
+      "Databases"
+    ],
+    "excerpt": "Detailed guide to SQL transactions — ACID properties, commit/rollback patterns, and concurrency control.",
+    "topics": [
+      "Data & SQL"
+    ]
   },
   {
     "title": "How to Use Homebrew to Install PostgreSQL on Mac",
     "url": "https://www.datacamp.com/tutorial/brew-install-postgres",
     "platform": "DataCamp",
-    "tags": ["PostgreSQL", "DevOps"],
-    "excerpt": "Practical setup guide for PostgreSQL on macOS using Homebrew — installation, path setup, and essential commands."
+    "tags": [
+      "PostgreSQL",
+      "DevOps"
+    ],
+    "excerpt": "Practical setup guide for PostgreSQL on macOS using Homebrew — installation, path setup, and essential commands.",
+    "topics": [
+      "Data & SQL",
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "What Is a Parquet File? Key Things to Know",
     "url": "https://www.datacamp.com/tutorial/what-is-a-parquet-file",
     "platform": "DataCamp",
-    "tags": ["Data Engineering", "Big Data"],
-    "excerpt": "Explains Parquet's columnar storage format, performance benefits, and when to use it in modern data pipelines."
+    "tags": [
+      "Data Engineering",
+      "Big Data"
+    ],
+    "excerpt": "Explains Parquet's columnar storage format, performance benefits, and when to use it in modern data pipelines.",
+    "topics": [
+      "Agents & RAG",
+      "Data & SQL"
+    ]
   },
   {
     "title": "Nemotron 3: Architecture, Benchmarks, and Model Comparisons",
     "url": "https://www.datacamp.com/blog/nvidia-nemotron-3",
     "platform": "DataCamp",
-    "tags": ["LLMs", "NVIDIA", "AI"],
-    "excerpt": "Technical coverage of NVIDIA's Nemotron 3 — MoE architecture, throughput vs reasoning tradeoffs, and comparisons."
+    "tags": [
+      "LLMs",
+      "NVIDIA",
+      "AI"
+    ],
+    "excerpt": "Technical coverage of NVIDIA's Nemotron 3 — MoE architecture, throughput vs reasoning tradeoffs, and comparisons.",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI",
+      "Machine Learning"
+    ]
   },
   {
     "title": "Python Backend Development: A Complete Guide for Beginners",
     "url": "https://www.datacamp.com/tutorial/python-backend-development",
     "platform": "DataCamp",
-    "tags": ["Python", "Backend", "Django"],
-    "excerpt": "End-to-end guide covering Django, Flask, APIs, authentication, and deployment for Python backend development."
+    "tags": [
+      "Python",
+      "Backend",
+      "Django"
+    ],
+    "excerpt": "End-to-end guide covering Django, Flask, APIs, authentication, and deployment for Python backend development.",
+    "topics": [
+      "Dev tools & APIs",
+      "Python"
+    ]
   },
   {
     "title": "How to Measure RAG System Performance",
     "url": "https://dev.to/actiandev/how-to-measure-rag-system-performance-1i1h",
     "platform": "Hackmamba",
-    "tags": ["RAG", "AI Evaluation", "LLMs"],
+    "tags": [
+      "RAG",
+      "AI Evaluation",
+      "LLMs"
+    ],
     "excerpt": "Deep-dive into evaluating RAG systems — covering metrics like faithfulness, relevance, and context precision.",
-    "featured": true
+    "featured": 3,
+    "date": "2026-03",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI"
+    ]
   },
   {
     "title": "How to Perform Machine Learning Tasks with Python and SQL",
     "url": "https://www.freecodecamp.org/news/machine-learning-with-python-and-sql/",
     "platform": "freeCodeCamp",
-    "tags": ["ML", "Python", "SQL"],
-    "excerpt": "Connecting Python ML pipelines to SQL databases using PyMySQL and Scikit-learn for real-world data tasks."
+    "tags": [
+      "ML",
+      "Python",
+      "SQL"
+    ],
+    "excerpt": "Connecting Python ML pipelines to SQL databases using PyMySQL and Scikit-learn for real-world data tasks.",
+    "topics": [
+      "Machine Learning",
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "How to Automate Excel Tasks with Python",
     "url": "https://www.freecodecamp.org/news/automate-excel-tasks-with-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Excel", "Pandas", "Automation"],
-    "excerpt": "Automating Excel workflows with Pandas, openpyxl, and pyautogui — data extraction, reporting, and visualisation."
+    "tags": [
+      "Excel",
+      "Pandas",
+      "Automation"
+    ],
+    "excerpt": "Automating Excel workflows with Pandas, openpyxl, and pyautogui — data extraction, reporting, and visualisation.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "Advanced SQL Techniques for Complex Queries",
     "url": "https://www.freecodecamp.org/news/advanced-sql-techniques/",
     "platform": "freeCodeCamp",
-    "tags": ["SQL", "Analytics"],
-    "excerpt": "Window functions, CTEs, and advanced SQL patterns for data analysts working with complex datasets."
+    "tags": [
+      "SQL",
+      "Analytics"
+    ],
+    "excerpt": "Window functions, CTEs, and advanced SQL patterns for data analysts working with complex datasets.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "How to Get Started in Data Analytics — A Roadmap for Beginners",
     "url": "https://www.freecodecamp.org/news/data-analytics-roadmap/",
     "platform": "freeCodeCamp",
-    "tags": ["Data Analytics", "Career"],
-    "excerpt": "Career guide and structured learning roadmap for aspiring data analysts entering the field."
+    "tags": [
+      "Data Analytics",
+      "Career"
+    ],
+    "excerpt": "Career guide and structured learning roadmap for aspiring data analysts entering the field.",
+    "topics": [
+      "Data & SQL"
+    ]
   },
   {
     "title": "How to Generate Automated Reports from a SQL Database Using Python",
     "url": "https://www.freecodecamp.org/news/automating-report-generation-from-sql-databases-using-python/",
     "platform": "freeCodeCamp",
-    "tags": ["SQL", "Python", "Reports"],
-    "excerpt": "Python-powered automated report generation from SQL databases — reducing manual extraction and formatting time."
+    "tags": [
+      "SQL",
+      "Python",
+      "Reports"
+    ],
+    "excerpt": "Python-powered automated report generation from SQL databases — reducing manual extraction and formatting time.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "SQL Tips to Help You Save Time and Write Simpler Queries",
     "url": "https://www.freecodecamp.org/news/sql-tips-save-time-write-simpler-queries/",
     "platform": "freeCodeCamp",
-    "tags": ["SQL", "Productivity"],
-    "excerpt": "Practical SQL optimisation tips using aliases, joins, and subqueries for working data analysts."
+    "tags": [
+      "SQL",
+      "Productivity"
+    ],
+    "excerpt": "Practical SQL optimisation tips using aliases, joins, and subqueries for working data analysts.",
+    "topics": [
+      "Data & SQL"
+    ]
   },
   {
     "title": "How to Automate SQL Database Backups Using Python",
     "url": "https://www.freecodecamp.org/news/automate-sql-database-backups-using-python/",
     "platform": "freeCodeCamp",
-    "tags": ["SQL", "Python", "Automation"],
-    "excerpt": "Automating SQL database backup workflows with pyodbc and Pandas — faster, less error-prone backups."
+    "tags": [
+      "SQL",
+      "Python",
+      "Automation"
+    ],
+    "excerpt": "Automating SQL database backup workflows with pyodbc and Pandas — faster, less error-prone backups.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "How to Read and Write Data to a SQL Database Using Python",
     "url": "https://www.freecodecamp.org/news/how-to-read-and-write-data-to-a-sql-database-using-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Python", "SQL", "Databases"],
-    "excerpt": "CRUD operations on SQL databases using pymysql and psycopg2 — practical tutorial for data pipelines."
+    "tags": [
+      "Python",
+      "SQL",
+      "Databases"
+    ],
+    "excerpt": "CRUD operations on SQL databases using pymysql and psycopg2 — practical tutorial for data pipelines.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "How to Remove Duplicate Data in SQL",
     "url": "https://www.freecodecamp.org/news/how-to-remove-duplicate-data-in-sql/",
     "platform": "freeCodeCamp",
-    "tags": ["SQL", "Data Quality"],
-    "excerpt": "DISTINCT, GROUP BY, and INNER JOIN techniques for deduplicating SQL data — cleaner, faster databases."
+    "tags": [
+      "SQL",
+      "Data Quality"
+    ],
+    "excerpt": "DISTINCT, GROUP BY, and INNER JOIN techniques for deduplicating SQL data — cleaner, faster databases.",
+    "topics": [
+      "Data & SQL"
+    ]
   },
   {
     "title": "How to Effectively Search Large Datasets in Python",
     "url": "https://www.freecodecamp.org/news/how-to-search-large-datasets-in-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Python", "Data"],
-    "excerpt": "Binary search, sets, and dictionaries for efficient lookup in large Python datasets."
+    "tags": [
+      "Python",
+      "Data"
+    ],
+    "excerpt": "Binary search, sets, and dictionaries for efficient lookup in large Python datasets.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "Multi-Dimensional Arrays in Python — Matrices Explained with NumPy",
     "url": "https://www.freecodecamp.org/news/multi-dimensional-arrays-in-python/",
     "platform": "freeCodeCamp",
-    "tags": ["NumPy", "Python"],
-    "excerpt": "NumPy matrix operations with practical examples — bridging math concepts and Python implementation."
+    "tags": [
+      "NumPy",
+      "Python"
+    ],
+    "excerpt": "NumPy matrix operations with practical examples — bridging math concepts and Python implementation.",
+    "topics": [
+      "Python"
+    ]
   },
   {
     "title": "Slicing and Indexing in Python — Explained with Examples",
     "url": "https://www.freecodecamp.org/news/slicing-and-indexing-in-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Python", "Data"],
-    "excerpt": "Core Python data access concepts — list filtering, column extraction, and substring operations explained."
+    "tags": [
+      "Python",
+      "Data"
+    ],
+    "excerpt": "Core Python data access concepts — list filtering, column extraction, and substring operations explained.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "How to Use Conditional Statements in Python (if, else, elif)",
     "url": "https://www.freecodecamp.org/news/how-to-use-conditional-statements-if-else-elif-in-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Python", "Beginners"],
-    "excerpt": "Practical guide to if, else, and elif statements in Python with real-world examples."
+    "tags": [
+      "Python",
+      "Beginners"
+    ],
+    "excerpt": "Practical guide to if, else, and elif statements in Python with real-world examples.",
+    "topics": [
+      "Python"
+    ]
   },
   {
     "title": "How to Use Loops in Python",
     "url": "https://www.freecodecamp.org/news/how-to-use-loops-in-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Python", "Beginners"],
-    "excerpt": "For and while loops explained clearly — essential Python concepts with practical code examples."
+    "tags": [
+      "Python",
+      "Beginners"
+    ],
+    "excerpt": "For and while loops explained clearly — essential Python concepts with practical code examples.",
+    "topics": [
+      "Python"
+    ]
   },
   {
     "title": "How to Define and Call Functions in Python",
     "url": "https://www.freecodecamp.org/news/how-to-define-and-call-functions-in-python/",
     "platform": "freeCodeCamp",
-    "tags": ["Python", "Beginners"],
-    "excerpt": "Defining and calling functions in Python — improving code readability and reusability explained with examples."
+    "tags": [
+      "Python",
+      "Beginners"
+    ],
+    "excerpt": "Defining and calling functions in Python — improving code readability and reusability explained with examples.",
+    "topics": [
+      "Python"
+    ]
   },
   {
     "title": "How to Create and Manipulate Tables in a SQL Database Using Python",
     "url": "https://www.freecodecamp.org/news/create-and-manipulate-tables-in-a-sql-database-using-python/",
     "platform": "freeCodeCamp",
-    "tags": ["SQLite", "Python"],
-    "excerpt": "SQLite and Python for structured data table management — beginner-to-intermediate with clear examples."
+    "tags": [
+      "SQLite",
+      "Python"
+    ],
+    "excerpt": "SQLite and Python for structured data table management — beginner-to-intermediate with clear examples.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "How to Test and Debug SQL Queries with Python",
     "url": "https://www.freecodecamp.org/news/testing-and-debugging-sql-queries-with-python/",
     "platform": "freeCodeCamp",
-    "tags": ["SQL", "Testing", "Python"],
-    "excerpt": "Techniques for testing and debugging SQL queries programmatically in Python — reliable data pipelines."
+    "tags": [
+      "SQL",
+      "Testing",
+      "Python"
+    ],
+    "excerpt": "Techniques for testing and debugging SQL queries programmatically in Python — reliable data pipelines.",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "Deploying a Machine Learning Model as an API",
     "url": "https://medium.com/cometheartbeat/deploying-a-machine-learning-model-as-an-api-d3cbef264ce4",
     "platform": "Medium",
-    "tags": ["ML", "API", "Deployment"],
-    "excerpt": "Why it matters to deploy ML models to production, and how an API makes that practical — with step-by-step guidance."
+    "tags": [
+      "ML",
+      "API",
+      "Deployment"
+    ],
+    "excerpt": "Why it matters to deploy ML models to production, and how an API makes that practical — with step-by-step guidance.",
+    "topics": [
+      "Machine Learning",
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "Detecting Credit Card Fraud with Machine Learning",
     "url": "https://heartbeat.comet.ml/detecting-credit-card-fraud-with-machine-learning-644db0795edf",
     "platform": "Medium",
-    "tags": ["ML", "Fraud Detection", "Classification"],
-    "excerpt": "Building a credit card fraud detection model — covering the dataset, feature engineering, and model evaluation."
+    "tags": [
+      "ML",
+      "Fraud Detection",
+      "Classification"
+    ],
+    "excerpt": "Building a credit card fraud detection model — covering the dataset, feature engineering, and model evaluation.",
+    "topics": [
+      "Machine Learning",
+      "Data & SQL"
+    ]
   },
   {
     "title": "Logging Recommendation System Visualizations in Comet",
     "url": "https://medium.com/cometheartbeat/logging-recommendation-system-visualizations-in-comet-2aeb14669c2e",
     "platform": "Medium",
-    "tags": ["ML", "Comet", "Recommender Systems"],
-    "excerpt": "Building a movie recommendation system and logging visualizations in Comet for experiment tracking."
+    "tags": [
+      "ML",
+      "Comet",
+      "Recommender Systems"
+    ],
+    "excerpt": "Building a movie recommendation system and logging visualizations in Comet for experiment tracking.",
+    "topics": [
+      "Machine Learning"
+    ]
   },
   {
     "title": "Exploring Image Classification with Kangas",
     "url": "https://medium.com/cometheartbeat/exploring-image-classification-with-kangas-c710c7a5a4d9",
     "platform": "Medium",
-    "tags": ["ML", "Computer Vision", "Kangas"],
-    "excerpt": "Using Kangas to explore image classification — uploading images, labeling data, and visualising model performance."
+    "tags": [
+      "ML",
+      "Computer Vision",
+      "Kangas"
+    ],
+    "excerpt": "Using Kangas to explore image classification — uploading images, labeling data, and visualising model performance.",
+    "topics": [
+      "Machine Learning",
+      "Data & SQL"
+    ]
   },
   {
     "title": "Tracking Your Sentiment Analysis with Comet",
     "url": "https://medium.com/cometheartbeat/tracking-your-sentiment-analysis-with-comet-3f94bd92a84f",
     "platform": "Medium",
-    "tags": ["NLP", "Sentiment Analysis", "Comet"],
-    "excerpt": "Opinion mining with NLP — building and tracking a sentiment analysis model using Comet experiment tracking."
+    "tags": [
+      "NLP",
+      "Sentiment Analysis",
+      "Comet"
+    ],
+    "excerpt": "Opinion mining with NLP — building and tracking a sentiment analysis model using Comet experiment tracking.",
+    "topics": [
+      "Machine Learning"
+    ]
   },
   {
     "title": "Monitoring a Convolutional Neural Network (CNN) in Comet",
     "url": "https://medium.com/cometheartbeat/monitoring-a-convolutional-neural-network-cnn-in-comet-702c2d51c839",
     "platform": "Medium",
-    "tags": ["Deep Learning", "CNN", "Comet"],
-    "excerpt": "Training an image classification CNN and monitoring its training metrics and performance using Comet."
+    "tags": [
+      "Deep Learning",
+      "CNN",
+      "Comet"
+    ],
+    "excerpt": "Training an image classification CNN and monitoring its training metrics and performance using Comet.",
+    "date": "2023-03",
+    "topics": [
+      "Machine Learning"
+    ]
   },
   {
     "title": "Integrating Time Series Analysis in Comet",
     "url": "https://medium.com/cometheartbeat/integrating-time-series-analysis-in-comet-293d1d0e2b22",
     "platform": "Medium",
-    "tags": ["Time Series", "ML", "Comet"],
-    "excerpt": "How to integrate time series forecasting workflows into Comet for experiment tracking and result logging."
-  },
-  {
-    "title": "MalarAI: Mobile Deep Learning for Malaria Detection in Low-Resource Settings",
-    "url": "https://medium.com/@oluseyejeremiah",
-    "platform": "Medium",
-    "tags": ["Deep Learning", "Healthcare", "TFLite"],
-    "excerpt": "MSc research write-up on EfficientNet-B0, Grad-CAM, and TensorFlow Lite for offline Android malaria detection."
+    "tags": [
+      "Time Series",
+      "ML",
+      "Comet"
+    ],
+    "excerpt": "How to integrate time series forecasting workflows into Comet for experiment tracking and result logging.",
+    "topics": [
+      "Machine Learning"
+    ]
   },
   {
     "title": "Understanding Various Cloud Services",
     "url": "https://medium.com/@oluseyejeremiah/understanding-various-cloud-services-1f113496e9a5",
     "platform": "Medium",
-    "tags": ["Cloud", "AWS", "Azure"],
-    "excerpt": "How cloud computing works, the various cloud service models, and types of cloud deployment explained clearly."
+    "tags": [
+      "Cloud",
+      "AWS",
+      "Azure"
+    ],
+    "excerpt": "How cloud computing works, the various cloud service models, and types of cloud deployment explained clearly.",
+    "topics": [
+      "Machine Learning",
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "Understanding Azure SQL Elastic Pools",
     "url": "https://medium.com/@oluseyejeremiah/understanding-azure-sql-elastic-pools-62f4980e8743",
     "platform": "Medium",
-    "tags": ["Azure", "SQL", "Cloud"],
-    "excerpt": "Azure SQL Database and Elastic Pools explained — scalable, secure, cost-effective cloud database management."
+    "tags": [
+      "Azure",
+      "SQL",
+      "Cloud"
+    ],
+    "excerpt": "Azure SQL Database and Elastic Pools explained — scalable, secure, cost-effective cloud database management.",
+    "topics": [
+      "Data & SQL",
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "How to Implement a Robust Voice Authentication System with Go and Twilio",
     "url": "https://www.twilio.com/en-us/blog/implement-robust-voice-authentication-go",
     "platform": "Twilio",
-    "tags": ["Voice API", "Go", "Auth"],
-    "excerpt": "Building a voice-based OTP system using Twilio Programmable Voice and Go — secure, accessible authentication."
+    "tags": [
+      "Voice API",
+      "Go",
+      "Auth"
+    ],
+    "excerpt": "Building a voice-based OTP system using Twilio Programmable Voice and Go — secure, accessible authentication.",
+    "topics": [
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "Creating a Health Chatbot Using Twilio and Gemini",
     "url": "https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide",
     "platform": "Twilio",
-    "tags": ["WhatsApp API", "Gemini", "AI Chatbot"],
-    "excerpt": "Building an intelligent healthcare chatbot with Twilio's WhatsApp API and Google Gemini AI responses."
+    "tags": [
+      "WhatsApp API",
+      "Gemini",
+      "AI Chatbot"
+    ],
+    "excerpt": "Building an intelligent healthcare chatbot with Twilio's WhatsApp API and Google Gemini AI responses.",
+    "featured": 4,
+    "topics": [
+      "Healthcare AI",
+      "LLMs & GenAI",
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "How to Build a To-Do App Using Next.js and Strapi",
     "url": "https://strapi.io/blog/how-to-build-a-to-do-app-using-next-js-and-strapi",
     "platform": "Strapi",
-    "tags": ["Next.js", "Strapi", "GraphQL"],
-    "excerpt": "Full-stack To-Do app with Strapi's headless CMS and Next.js — covering GraphQL, content types, and CRUD."
+    "tags": [
+      "Next.js",
+      "Strapi",
+      "GraphQL"
+    ],
+    "excerpt": "Full-stack To-Do app with Strapi's headless CMS and Next.js — covering GraphQL, content types, and CRUD.",
+    "topics": [
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "How to Build a Hotel Management App Using Strapi and Next.js",
     "url": "https://strapi.io/blog/how-to-build-a-hotel-management-app-using-strapi-and-nextjs",
     "platform": "Strapi",
-    "tags": ["Next.js", "Strapi", "Full-stack"],
-    "excerpt": "End-to-end hotel booking system with auth, image upload, availability, and room selection using Strapi + Next.js."
+    "tags": [
+      "Next.js",
+      "Strapi",
+      "Full-stack"
+    ],
+    "excerpt": "End-to-end hotel booking system with auth, image upload, availability, and room selection using Strapi + Next.js.",
+    "featured": 5,
+    "topics": [
+      "Dev tools & APIs"
+    ]
   },
   {
     "title": "Dealing with Missing Values in a Dataset",
     "url": "https://oluseyejeremiah.hashnode.dev/dealing-with-missing-values-in-a-dataset",
     "platform": "Hashnode",
-    "tags": ["Python", "Data Cleaning", "ML"],
-    "excerpt": "Common causes of missing data and techniques to handle them — imputation, deletion, and best practices."
+    "tags": [
+      "Python",
+      "Data Cleaning",
+      "ML"
+    ],
+    "excerpt": "Common causes of missing data and techniques to handle them — imputation, deletion, and best practices.",
+    "date": "2022-05",
+    "topics": [
+      "Data & SQL",
+      "Python"
+    ]
   },
   {
     "title": "Explaining the Differences Between SaaS, PaaS and IaaS",
     "url": "https://oluseyejeremiah.hashnode.dev/explaining-the-differences-between-saaspaas-and-iaas",
     "platform": "Hashnode",
-    "tags": ["Cloud", "SaaS", "IaaS"],
-    "excerpt": "Clear breakdown of the three cloud service models — features, advantages, disadvantages, and when to use each."
+    "tags": [
+      "Cloud",
+      "SaaS",
+      "IaaS"
+    ],
+    "excerpt": "Clear breakdown of the three cloud service models — features, advantages, disadvantages, and when to use each.",
+    "date": "2022-05",
+    "topics": [
+      "Machine Learning",
+      "Dev tools & APIs"
+    ]
+  },
+  {
+    "title": "How We Did Entity Resolution with a Vector DB and Argon",
+    "url": "https://dev.to/actiandev/how-we-did-entity-resolution-with-a-vector-db-and-argon-159l",
+    "platform": "Hackmamba",
+    "tags": [
+      "Vector DB",
+      "LLMs",
+      "Python"
+    ],
+    "excerpt": "Matching messy records that refer to the same real-world entity, using vector search and Argon.",
+    "date": "2026-11",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI",
+      "Python"
+    ]
+  },
+  {
+    "title": "Build a Local AI Agent on a Raspberry Pi 5 with VectorAI DB",
+    "url": "https://dev.to/actiandev/build-a-local-ai-agent-on-a-raspberry-pi-5-with-vectorai-db-105b",
+    "platform": "Hackmamba",
+    "tags": [
+      "AI Agents",
+      "Edge AI",
+      "Python"
+    ],
+    "excerpt": "A hands-on build of an AI agent that runs fully on a Raspberry Pi 5, with VectorAI DB for local retrieval.",
+    "date": "2026-10",
+    "topics": [
+      "Agents & RAG",
+      "Python"
+    ]
+  },
+  {
+    "title": "How Regenesis Built MedShift's Self-Healing Loop with VectorAI DB",
+    "url": "https://dev.to/actiandev/how-regenesis-built-medshifts-self-healing-loop-with-vectorai-db-3g77",
+    "platform": "Hackmamba",
+    "tags": [
+      "AI Agents",
+      "Architecture",
+      "Vector DB"
+    ],
+    "excerpt": "Case study: how the Regenesis team designed a self-healing agent loop for MedShift on top of VectorAI DB.",
+    "date": "2026-10",
+    "topics": [
+      "Agents & RAG"
+    ]
+  },
+  {
+    "title": "Build a Local RAG Pipeline on Declassified UFO Files with VectorAI DB and Ollama",
+    "url": "https://dev.to/actiandev/build-a-local-rag-pipeline-on-declassified-ufo-files-with-vectorai-db-and-ollama-7fc",
+    "platform": "Hackmamba",
+    "tags": [
+      "RAG",
+      "Ollama",
+      "Local LLMs"
+    ],
+    "excerpt": "A fully local RAG pipeline over declassified documents, using VectorAI DB for retrieval and Ollama for generation.",
+    "date": "2026-07",
+    "topics": [
+      "Agents & RAG",
+      "LLMs & GenAI"
+    ]
+  },
+  {
+    "title": "How to Build Persistent Agent Memory Across Sessions",
+    "url": "https://dev.to/actiandev/how-to-build-persistent-agent-memory-across-sessions-117",
+    "platform": "Hackmamba",
+    "tags": [
+      "AI Agents",
+      "Memory",
+      "RAG"
+    ],
+    "excerpt": "Giving AI agents memory that survives between sessions, with patterns for storing and recalling context.",
+    "date": "2026-07",
+    "topics": [
+      "Agents & RAG"
+    ]
+  },
+  {
+    "title": "The Hidden Cost of Vector Database Pricing Models",
+    "url": "https://dev.to/actiandev/the-hidden-cost-of-vector-database-pricing-models-n45",
+    "platform": "Hackmamba",
+    "tags": [
+      "Vector DB",
+      "Infrastructure"
+    ],
+    "excerpt": "How vector database pricing models compare and where the hidden costs show up as you scale.",
+    "date": "2026-05",
+    "topics": [
+      "Agents & RAG",
+      "Machine Learning",
+      "Data & SQL"
+    ]
+  },
+  {
+    "title": "Building a HealthBot Using Chainlit and OpenAI",
+    "url": "https://medium.com/@oluseyejeremiah/building-a-healthbot-using-chainlit-and-openai-6f131f5e4b66",
+    "platform": "Medium",
+    "tags": [
+      "Healthcare AI",
+      "LLMs",
+      "Chainlit"
+    ],
+    "excerpt": "Building a conversational health-information assistant with a Chainlit interface and OpenAI models.",
+    "date": "2024-01",
+    "topics": [
+      "Healthcare AI",
+      "LLMs & GenAI",
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Building an Effective and User-Friendly Medical Chatbot with OpenAI and CometLLM",
+    "url": "https://medium.com/@oluseyejeremiah/building-an-effective-and-user-friendly-medical-chatbot-with-openai-and-cometllm-a-step-by-step-0c822f9bf47b",
+    "platform": "Medium",
+    "tags": [
+      "Healthcare AI",
+      "LLMs",
+      "LLMOps"
+    ],
+    "excerpt": "A step-by-step medical chatbot build with OpenAI, using CometLLM to log and track prompts.",
+    "date": "2024-03",
+    "topics": [
+      "Healthcare AI",
+      "LLMs & GenAI",
+      "Data & SQL"
+    ]
+  },
+  {
+    "title": "Building a Heart Disease Prediction Model Using Machine Learning",
+    "url": "https://medium.com/@oluseyejeremiah/building-a-heart-disease-prediction-model-using-machine-learning-4c690243a93e",
+    "platform": "Medium",
+    "tags": [
+      "Healthcare AI",
+      "ML",
+      "Classification"
+    ],
+    "excerpt": "Training and evaluating a classifier that predicts heart disease risk from clinical features.",
+    "date": "2024-01",
+    "topics": [
+      "Healthcare AI",
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Exploring the Titanic Dataset Using YOLOPandas and Comet",
+    "url": "https://medium.com/@oluseyejeremiah/exploring-the-titanic-dataset-using-yolopandas-and-comet-173c0df9bde",
+    "platform": "Medium",
+    "tags": [
+      "Pandas",
+      "LLMs",
+      "Comet"
+    ],
+    "excerpt": "Exploratory analysis of the Titanic dataset with YOLOPandas, a natural-language interface for pandas.",
+    "date": "2024-03",
+    "topics": [
+      "LLMs & GenAI",
+      "Data & SQL"
+    ]
+  },
+  {
+    "title": "Getting Started with Comet's LLMOps",
+    "url": "https://heartbeat.comet.ml/getting-started-with-comets-llmops-40ce27bddb42",
+    "platform": "Medium",
+    "tags": [
+      "LLMOps",
+      "LLMs",
+      "Comet"
+    ],
+    "excerpt": "An introduction to tracking and debugging LLM prompts and chains with Comet's LLMOps tools.",
+    "date": "2023-10",
+    "topics": [
+      "LLMs & GenAI"
+    ]
+  },
+  {
+    "title": "Image Segmentation Techniques in Computer Vision",
+    "url": "https://heartbeat.comet.ml/image-segmentation-techniques-in-computer-vision-68eb3c2c20d3",
+    "platform": "Medium",
+    "tags": [
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "excerpt": "An overview of the main image segmentation approaches in computer vision, with Python examples.",
+    "date": "2023-08",
+    "topics": [
+      "Machine Learning",
+      "Python"
+    ]
+  },
+  {
+    "title": "Monitoring Your CV Model: A Beginner's Guide Using Kangas and Comet",
+    "url": "https://heartbeat.comet.ml/monitoring-your-cv-model-a-beginners-guide-using-kangas-and-comet-4d70af55c1ef",
+    "platform": "Medium",
+    "tags": [
+      "Computer Vision",
+      "MLOps",
+      "Comet"
+    ],
+    "excerpt": "Monitoring a computer vision model's predictions and performance with Kangas and Comet.",
+    "date": "2023-05",
+    "topics": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Managing TensorFlow/Keras Model Development with Comet",
+    "url": "https://heartbeat.comet.ml/a-step-by-step-guide-efficiently-managing-tensorflow-keras-model-development-with-comet-c44476a8e3c3",
+    "platform": "Medium",
+    "tags": [
+      "Deep Learning",
+      "TensorFlow",
+      "MLOps"
+    ],
+    "excerpt": "A step-by-step workflow for tracking TensorFlow/Keras experiments with Comet.",
+    "date": "2023-11",
+    "topics": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "title": "Why GraphQL Adoption Keeps Growing: Benefits and Limitations",
+    "url": "https://medium.com/@oluseyejeremiah/why-graphql-adoption-keeps-growing-benefits-and-limitations-9c5408c902ff",
+    "platform": "Medium",
+    "tags": [
+      "GraphQL",
+      "APIs"
+    ],
+    "excerpt": "Why teams keep adopting GraphQL, and the trade-offs to weigh against REST.",
+    "date": "2025-10",
+    "topics": [
+      "Dev tools & APIs"
+    ]
   }
 ]

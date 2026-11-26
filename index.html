@@ -3,820 +3,779 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oluseye Jeremiah Oluwapelumi — Writing Portfolio</title>
+<title>Oluseye Jeremiah: AI Engineer and Technical Writer</title>
+<meta name="description" content="Oluseye Jeremiah Oluwapelumi: AI engineer and technical writer focused on AI in healthcare. 62 published tutorials on LLMs, agents, RAG, ML and data for DataCamp, freeCodeCamp, Twilio, Strapi and more.">
+<meta property="og:title" content="Oluseye Jeremiah: AI Engineer and Technical Writer">
+<meta property="og:description" content="AI engineer and technical writer focused on AI in healthcare. 62 published tutorials.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11120e" media="(prefers-color-scheme: dark)">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#fafaf9;--white:#fff;--ink:#111110;--mid:#444440;--muted:#888884;
-  --border:#e8e7e4;--border2:#d0cfc9;
-  --accent:#0f5bb5;--accent-bg:#eef4fd;--accent-bd:#c3d8f5;
-  --green:#15803d;
-  --serif:'Playfair Display',serif;--sans:'Inter',sans-serif;
+  --bg:#f6f4ef;--surface:#fffdf9;--sunk:#efece4;--ink:#16150f;--mid:#47453d;--muted:#7a776b;
+  --line:#e2ded3;--line2:#cbc6b6;--accent:#0b6b5d;--accent-2:#c2512b;--accent-ink:#fff;--accent-soft:#dff0eb;
+  --serif:'Newsreader',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  color-scheme:light;
 }
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;}
-a{color:inherit;text-decoration:none;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#11120e;--surface:#191a15;--sunk:#0d0e0b;--ink:#eeebe1;--mid:#c3bfb2;--muted:#8d8a7d;
+  --line:#2a2b24;--line2:#3b3c33;--accent:#5cc7ae;--accent-2:#eb8a63;--accent-ink:#0b1411;--accent-soft:#182a25;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11120e;--surface:#191a15;--sunk:#0d0e0b;--ink:#eeebe1;--mid:#c3bfb2;--muted:#8d8a7d;
+  --line:#2a2b24;--line2:#3b3c33;--accent:#5cc7ae;--accent-2:#eb8a63;--accent-ink:#0b1411;--accent-soft:#182a25;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+@media(max-width:520px){.wrap{padding:0 16px}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.muted{color:var(--muted)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 12px;border-radius:6px;z-index:99}
+.skip:focus{left:8px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.logo{font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.mark{width:26px;height:26px;border-radius:7px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:-.04em}
+.nav-links{display:flex;gap:24px;margin-left:auto;font-size:14px;color:var(--mid)}
+.nav-links a{transition:color .15s ease}
+.theme{background:none;border:1px solid var(--line2);color:var(--mid);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:15px;display:grid;place-items:center;transition:transform 160ms var(--ease-out),border-color .15s ease}
+.theme:active{transform:scale(.94)}
+@media(max-width:720px){.nav-links{display:none}.theme{margin-left:auto}}
 
 /* hero */
-.hero{background:var(--white);border-bottom:1px solid var(--border);padding:4rem 2rem 3rem;}
-.hero-inner{max-width:1060px;margin:0 auto;}
-.tag-row{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap;}
-.tag-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;}
-.tag-dot{width:4px;height:4px;border-radius:50%;background:var(--border2);}
-.name{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem;}
-.name em{font-style:italic;font-weight:400;color:var(--muted);}
-.bio{font-size:14.5px;color:var(--mid);line-height:1.85;max-width:600px;margin-bottom:1.5rem;}
-.bio strong{color:var(--ink);font-weight:600;}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:2rem;}
-.chip{font-size:11.5px;font-weight:500;padding:5px 13px;border-radius:100px;background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent-bd);}
-.stats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:1.75rem;border-top:1px solid var(--border);}
-.st{display:flex;flex-direction:column;gap:3px;}
-.st-n{font-family:var(--serif);font-size:1.7rem;font-weight:700;}
-.st-l{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
-.updated{font-size:11px;color:var(--muted);margin-top:1rem;}
-.updated span{color:var(--green);font-weight:600;}
+.hero{padding:80px 0 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:56px;align-items:end}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--accent);background:var(--accent-soft);padding:6px 12px;border-radius:999px;font-weight:500;margin-bottom:28px}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+.roles{font-family:var(--mono);font-size:13px;color:var(--mid);display:flex;flex-wrap:wrap;gap:6px 10px;margin-bottom:18px;letter-spacing:.01em}
+.roles .sep{color:var(--line2)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:1.02;letter-spacing:-.03em}
+h1 .name-2{display:block;color:var(--accent);font-style:italic;font-weight:400;font-size:.62em;letter-spacing:-.02em;margin-top:.35em;line-height:1.1}
+.who{color:var(--ink);font-weight:500}
+.lede{font-size:clamp(1.05rem,1.5vw,1.18rem);color:var(--mid);max-width:54ch;margin-top:26px;line-height:1.65}
+.lede strong{color:var(--ink);font-weight:600}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:500;padding:11px 18px;border-radius:9px;border:1px solid var(--line2);background:var(--surface);transition:transform 160ms var(--ease-out),border-color .15s ease,background-color .15s ease,color .15s ease}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
-/* filter */
-.fbar{position:sticky;top:0;z-index:20;background:rgba(250,250,249,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);}
-.fi{max-width:1060px;margin:0 auto;padding:0 2rem;display:flex;overflow-x:auto;scrollbar-width:none;align-items:stretch;}
-.fi::-webkit-scrollbar{display:none;}
-.fb{font-family:var(--sans);font-size:12.5px;padding:13px 14px;border:none;background:none;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .15s;}
-.fb:hover{color:var(--ink);}
-.fb.on{color:var(--accent);border-bottom-color:var(--accent);font-weight:600;}
-.fcount{margin-left:auto;display:flex;align-items:center;font-size:12px;color:var(--muted);padding-left:1rem;white-space:nowrap;}
+/* now panel */
+.now{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.now-head{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;background:var(--sunk)}
+.now-head b{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-weight:500}
+.now dl{padding:6px 18px}
+.now dl div{display:grid;grid-template-columns:76px 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.now dl div:last-child{border-bottom:0}
+.now dt{font-family:var(--mono);font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.now dd{font-size:14.5px;color:var(--mid);line-height:1.5}
+.now dd a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:3px;transition:text-decoration-color .15s ease}
+.now-stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.now-stats div{padding:14px 18px;border-left:1px solid var(--line)}
+.now-stats div:first-child{border-left:0}
+.now-stats b{display:block;font-family:var(--serif);font-weight:500;font-size:1.6rem;line-height:1.1}
+.now-stats span{font-size:12px;color:var(--muted)}
 
-/* grid */
-.main{max-width:1060px;margin:0 auto;padding:2.5rem 2rem 5rem;}
-.sh{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:1.5rem;display:flex;align-items:center;gap:12px;}
-.sh::after{content:'';flex:1;height:1px;background:var(--border);}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:520px){.grid{grid-template-columns:1fr;}}
-.card-feat{grid-column:span 2;}
-@media(max-width:800px){.card-feat{grid-column:span 1;}}
-.card{background:var(--white);padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;transition:background .15s;}
-.card:hover{background:#fdfcfa;}
-.card-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
-.platform{font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:3px 10px;border-radius:100px;}
-.card-num{font-size:11px;color:var(--border2);font-weight:500;}
-.card-title{font-family:var(--serif);font-size:.97rem;font-weight:700;line-height:1.35;color:var(--ink);}
-.card-feat .card-title{font-size:1.15rem;}
-.card-excerpt{font-size:13px;color:var(--muted);line-height:1.75;flex:1;}
-.card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:.85rem;border-top:1px solid var(--border);flex-wrap:wrap;gap:.5rem;}
-.tags{display:flex;gap:5px;flex-wrap:wrap;}
-.t{font-size:10.5px;background:var(--bg);color:var(--muted);padding:2px 9px;border-radius:100px;border:1px solid var(--border);}
-.read-btn{font-size:12px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:4px;white-space:nowrap;transition:gap .15s;}
-.read-btn:hover{gap:7px;}
-.read-btn::after{content:'→';}
+.pubs{margin-top:64px;padding:22px 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 28px}
+.pubs-label{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.pubs a{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);color:var(--mid);transition:color .15s ease}
 
-/* see all */
-.see-all-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;}
-.see-all{font-size:13px;font-weight:600;color:var(--accent);border:1px solid var(--accent-bd);border-radius:6px;padding:9px 20px;background:var(--accent-bg);display:inline-flex;align-items:center;gap:6px;transition:background .15s;}
-.see-all:hover{background:#ddeafb;}
-.see-all::after{content:'↗';font-size:12px;}
+/* sections */
+section{padding:80px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px 40px;flex-wrap:wrap;margin-bottom:36px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.7rem);letter-spacing:-.02em;line-height:1.08}
+.sec-note{color:var(--muted);font-size:15px;max-width:42ch}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project.project-lead{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px 48px;align-items:start}
+.project-lead .pl-side{display:flex;flex-direction:column;gap:16px}
+@media(max-width:820px){.project.project-lead{grid-template-columns:1fr}}
+.points{list-style:none;display:flex;flex-direction:column;gap:10px}
+.points li{display:grid;grid-template-columns:18px 1fr;font-size:15px;color:var(--mid)}
+.points li::before{content:'+';font-family:var(--mono);color:var(--accent)}
+@media(max-width:820px){.projects{grid-template-columns:1fr}}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.project.project-lead{background:var(--sunk)}
+.project-lead > div:first-child{display:flex;flex-direction:column;gap:12px}
+.project-lead h3{font-size:clamp(2rem,3.4vw,2.6rem)}
+.project-lead .project-sum{font-size:16.5px}
+.kicker{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:flex;gap:10px;align-items:center}
+.idx{color:var(--accent)}
+.project h3{font-family:var(--serif);font-weight:500;font-size:1.6rem;letter-spacing:-.015em;line-height:1.12}
+.project-sum{color:var(--mid);font-size:15px;flex:1}
+.stack{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.stack li{font-family:var(--mono);font-size:11.5px;padding:3px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line);color:var(--mid)}
+.project-links{display:flex;flex-wrap:wrap;gap:18px;padding-top:14px;border-top:1px solid var(--line)}
+.tlink{font-size:14px;font-weight:500;color:var(--accent);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px;transition:text-decoration-color .15s ease}
+
+/* healthcare */
+.health{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:56px}
+@media(max-width:860px){.health{grid-template-columns:1fr;gap:28px}}
+.health-copy p:not(.eyebrow){color:var(--mid);font-size:16.5px;margin-top:18px;max-width:46ch}
+.health-copy p:not(.eyebrow) strong{color:var(--ink);font-weight:600}
+.hlist{list-style:none;border-top:1px solid var(--line)}
+.hlist a{display:grid;grid-template-columns:1fr 18px;gap:4px 14px;padding:18px 4px;border-bottom:1px solid var(--line);transition:background-color .15s ease}
+.h-meta{font-family:var(--mono);font-size:11.5px;color:var(--muted);grid-column:1}
+.h-title{font-family:var(--serif);font-size:1.25rem;line-height:1.3;grid-column:1;transition:color .15s ease}
+.hlist .arr{grid-row:1/3;grid-column:2;align-self:center}
+
+/* featured */
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.feats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.feats{grid-template-columns:1fr}}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:border-color .15s ease,transform 200ms var(--ease-out)}
+.feat:active{transform:scale(.99)}
+.feat.feat-lead{grid-column:span 2;background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.feat.feat-lead p,.feat.feat-lead .feat-meta{color:color-mix(in srgb,var(--bg) 76%,var(--ink))}
+.feat.feat-lead p{font-size:16px;max-width:52ch}
+.feat.feat-lead h3{font-size:clamp(1.5rem,2.6vw,2rem)}
+.feat.feat-lead .read{color:var(--bg)}
+@media(max-width:600px){.feat.feat-lead{grid-column:span 1}}
+.feat-meta{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.feat-tags{font-family:var(--mono);font-size:11px}
+.feat-tags::before{content:"/";margin-right:8px;opacity:.5}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.feat h3{font-family:var(--serif);font-weight:500;font-size:1.3rem;line-height:1.25;letter-spacing:-.01em}
+.feat p{font-size:14.5px;color:var(--mid);flex:1}
+.read{font-size:14px;font-weight:500;color:var(--accent);margin-top:6px}
+
+/* archive */
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.search,.select{font:inherit;font-size:15px;padding:11px 14px;border-radius:9px;border:1px solid var(--line2);background:var(--surface);color:var(--ink)}
+.search{flex:1 1 280px}
+.select{flex:0 0 auto;cursor:pointer}
+.search::placeholder{color:var(--muted)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:inherit;font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--line2);background:none;color:var(--mid);cursor:pointer;transition:transform 160ms var(--ease-out),background-color .15s ease,color .15s ease,border-color .15s ease}
+.chip:active{transform:scale(.96)}
+.chip span{color:var(--muted);font-family:var(--mono);font-size:11px;margin-left:2px}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.on span{color:color-mix(in srgb,var(--bg) 70%,var(--ink))}
+.count{font-size:13px;color:var(--muted);margin:18px 0 6px;font-family:var(--mono)}
+.rows{list-style:none;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto 18px;gap:20px;align-items:baseline;padding:15px 4px;border-bottom:1px solid var(--line);transition:background-color .12s ease}
+.row-main{display:flex;flex-direction:column;gap:3px;min-width:0}
+.row-title{font-family:var(--serif);font-size:1.1rem;line-height:1.35;transition:color .15s ease}
+.row-plat{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted)}
+.row-tags{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;max-width:260px}
+.row-tags span{font-family:var(--mono);font-size:11px;color:var(--muted);white-space:nowrap}
+.row-tags span+span::before{content:"· ";opacity:.6}
+.arr{color:var(--muted);font-size:13px}
+@media(max-width:760px){.row{grid-template-columns:minmax(0,1fr) 18px;gap:2px 12px}.row-main{grid-column:1}.row-tags{display:none}.row .arr{grid-column:2;align-self:center}}
+.empty{padding:28px 4px;color:var(--muted);display:none}
 
 /* about */
-.about{margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
-@media(max-width:680px){.about{grid-template-columns:1fr;gap:2rem;}}
-.al{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1rem;}
-.an{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin-bottom:.75rem;}
-.at{font-size:13.5px;color:var(--mid);line-height:1.9;}
-.at strong{color:var(--ink);font-weight:600;}
-.plist{display:flex;flex-direction:column;gap:8px;}
-.plat-row{display:flex;align-items:center;gap:11px;padding:10px 14px;border:1px solid var(--border);border-radius:7px;transition:background .15s,border-color .15s;}
-.plat-row:hover{background:var(--accent-bg);border-color:var(--accent-bd);}
-.plat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
-.plat-name{font-size:13px;font-weight:600;color:var(--ink);}
-.plat-desc{font-size:11.5px;color:var(--muted);margin-left:auto;}
-.plat-arr{font-size:12px;color:var(--border2);}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:32px}}
+.about p:not(.eyebrow){color:var(--mid);font-size:16.5px;margin-top:16px;max-width:60ch}
+.about p strong{color:var(--ink);font-weight:600}
+.offer{list-style:none}
+.offer li{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:34px 1fr;gap:4px 12px}
+.offer li:first-child{border-top:1px solid var(--line)}
+.offer i{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--accent);grid-row:span 2;padding-top:3px}
+.offer b{font-weight:600;font-size:15.5px}
+.offer span{color:var(--muted);font-size:14.5px}
 
-/* footer */
-footer{border-top:1px solid var(--border);max-width:1060px;margin:0 auto;padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--muted);flex-wrap:wrap;gap:.75rem;}
-.fd{display:flex;align-items:center;gap:7px;}
-.fdot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
-@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-top:0}
+.contact .eyebrow{color:color-mix(in srgb,var(--accent) 60%,var(--bg))}
+.contact h2{font-size:clamp(2.1rem,5.4vw,3.8rem);max-width:17ch}
+.contact p:not(.eyebrow){color:color-mix(in srgb,var(--bg) 74%,var(--ink));margin-top:18px;max-width:52ch;font-size:16.5px}
+.contact .btn{background:transparent;color:var(--bg);border-color:color-mix(in srgb,var(--bg) 30%,var(--ink))}
+.contact .btn.primary{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+footer{padding:24px 0 40px;font-size:13px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* hover only on devices that really hover */
+@media (hover:hover) and (pointer:fine){
+  .nav-links a:hover,.pubs a:hover{color:var(--ink)}
+  .theme:hover{color:var(--ink);border-color:var(--ink)}
+  .btn:hover{border-color:var(--ink)}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .contact .btn:hover{border-color:var(--bg)}
+  .contact .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .tlink:hover{text-decoration-color:currentColor}
+  .now dd a:hover{text-decoration-color:currentColor}
+  .feat:hover{border-color:var(--line2);transform:translateY(-2px)}
+  .chip:hover{border-color:var(--ink);color:var(--ink)}
+  .chip.on:hover{color:var(--bg)}
+  .row:hover,.hlist a:hover{background:var(--surface)}
+  .row:hover .row-title,.hlist a:hover .h-title{color:var(--accent)}
+}
+
+/* one entrance for the hero, nothing else */
+@media (prefers-reduced-motion:no-preference){
+  .hero-grid > *{animation:rise 520ms var(--ease-out) both}
+  .hero-grid > *:nth-child(2){animation-delay:90ms}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}}
+}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}html{scroll-behavior:auto}.feat:hover{transform:none}}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="hero">
-  <div class="hero-inner">
-    <div class="tag-row">
-      <span class="tag-label">Technical Writing Portfolio</span>
-      <span class="tag-dot"></span>
-      <span class="tag-label" style="color:var(--muted);font-weight:400;">AI · Data Science · Developer Tooling</span>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mark" aria-hidden="true">OJ</span>Oluseye Jeremiah</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#healthcare">Healthcare</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
-    <h1 class="name">Oluseye Jeremiah<br><em>Oluwapelumi.</em></h1>
-    <p class="bio">
-      <strong>BSc Computer Science · MSc Data Science</strong>, University of Ibadan.
-      Technical writer published across 8+ platforms — translating complex AI, data science,
-      and developer concepts into clear, practical content for technical and business audiences.
-      Ex-Microsoft Learn Student Ambassador · Ex-GDSC Core Team Member.
-    </p>
-    <div class="chips">
-      <span class="chip">Artificial Intelligence</span>
-      <span class="chip">Machine Learning</span>
-      <span class="chip">LLMs &amp; RAG</span>
-      <span class="chip">Python &amp; SQL</span>
-      <span class="chip">Data Workflows</span>
-      <span class="chip">Developer Tooling</span>
-      <span class="chip">B2B Tech Content</span>
-      <span class="chip">SEO Articles</span>
+    <button class="theme" id="theme" type="button" aria-label="Toggle theme">☾</button>
+  </div>
+</nav>
+
+<main id="main">
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="badge"><span class="pulse"></span>Open to freelance &amp; full-time roles</span>
+          <p class="roles"><span class="who">Oluseye Jeremiah Oluwapelumi</span></p>
+          <h1>AI engineer &amp;<br>technical writer. <span class="name-2">Building AI for healthcare.</span></h1>
+          <p class="lede">I build machine learning systems, from on-device medical imaging to LLM agents, and write the tutorials developers learn from. 62 published pieces on LLMs, agents, RAG, ML and data, each one built on code I actually ran.</p>
+          <div class="ctas">
+            <a class="btn primary" href="#contact">Work with me</a>
+            <a class="btn" href="#projects">See projects</a>
+          </div>
+        </div>
+        <aside class="now" aria-label="What I'm doing now">
+          <div class="now-head"><span>Now</span><b><span class="pulse"></span>Nov 2026</b></div>
+          <dl><div><dt>Writing</dt><dd>Agents, RAG and vector search tutorials for Actian, via Hackmamba</dd></div><div><dt>Building</dt><dd>MalarAI, offline malaria detection on Android</dd></div><div><dt>Latest</dt><dd><a href="https://dev.to/oluseyej/i-mapped-772-ai-agent-skill-repos-on-github-heres-what-was-actually-in-them-jpn" target="_blank" rel="noopener">I Mapped 772 AI Agent Skill Repos on GitHub. Here&#x27;s What Was Actually in Them</a> <span class="muted">· Nov 2026</span></dd></div></dl>
+          <div class="now-stats">
+            <div><b>62</b><span>articles</span></div>
+            <div><b>8</b><span>publications</span></div>
+            <div><b>5+ yrs</b><span>writing</span></div>
+          </div>
+        </aside>
+      </div>
+      <div class="pubs">
+        <span class="pubs-label">Published by</span>
+        <a href="https://medium.com/@oluseyejeremiah" target="_blank" rel="noopener">Medium</a><a href="https://www.freecodecamp.org/news/author/oluseye-jeremiah/" target="_blank" rel="noopener">freeCodeCamp</a><a href="https://www.datacamp.com/blog" target="_blank" rel="noopener">DataCamp</a><a href="https://dev.to/actiandev" target="_blank" rel="noopener">Hackmamba</a><a href="https://oluseyejeremiah.hashnode.dev" target="_blank" rel="noopener">Hashnode</a><a href="https://strapi.io/user/oluseye-jeremiah" target="_blank" rel="noopener">Strapi</a><a href="https://www.twilio.com/en-us/blog/authors/author.oluseye-jeremiah" target="_blank" rel="noopener">Twilio</a><a href="https://dev.to/oluseyej" target="_blank" rel="noopener">Dev.to</a>
+      </div>
     </div>
-    <div class="stats">
-      <div class="st"><span class="st-n">8+</span><span class="st-l">Platforms</span></div>
-      <div class="st"><span class="st-n">47+</span><span class="st-l">Articles</span></div>
-      <div class="st"><span class="st-n">Top</span><span class="st-l">fCC Contributor '23</span></div>
-      <div class="st"><span class="st-n">MSc</span><span class="st-l">Data Science</span></div>
+  </header>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Projects</p><h2>Things I've built</h2></div>
+        <p class="sec-note">Each one shipped, with code or a write-up you can check.</p>
+      </div>
+      <div class="projects">
+      <article class="project project-lead">
+        <div>
+          <p class="kicker"><span class="idx">01</span>MSc research · Mobile ML</p>
+          <h3>MalarAI</h3>
+          <p class="project-sum">An offline Android app that screens blood-smear images for malaria parasites, built for clinics with no reliable internet. EfficientNet-B0 with Grad-CAM explanations, converted to TensorFlow Lite to run on-device.</p>
+        </div>
+        <div class="pl-side">
+          <ul class="points"><li>Runs fully offline on an Android phone</li><li>Shows a Grad-CAM heatmap for every prediction</li><li>Designed for clinics in low-resource settings</li></ul>
+          <ul class="stack"><li>TensorFlow Lite</li><li>EfficientNet-B0</li><li>Grad-CAM</li><li>Android</li></ul>
+          <div class="project-links"><a class="tlink" href="https://github.com/olujerry/MalarAI" target="_blank" rel="noopener">Code on GitHub <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+      <article class="project">
+        <p class="kicker"><span class="idx">02</span>Data collection · Web app</p>
+        <h3>Skill Bank</h3>
+        <p class="project-sum">A searchable library of 772 AI agent skill repositories. I used Spidra Map to discover candidate repos, cleaned, deduplicated and verified them, then shipped a static React site with in-browser fuzzy search. Built with Meeday.</p>
+        <ul class="stack"><li>Spidra Map</li><li>Python</li><li>React</li><li>Vite</li><li>Fuse.js</li></ul>
+        <div class="project-links"><a class="tlink" href="https://skillbank-eight.vercel.app/" target="_blank" rel="noopener">Live site <span aria-hidden="true">↗</span></a><a class="tlink" href="https://dev.to/oluseyej/i-mapped-772-ai-agent-skill-repos-on-github-heres-what-was-actually-in-them-jpn" target="_blank" rel="noopener">Read the write-up <span aria-hidden="true">↗</span></a></div>
+      </article>
+      <article class="project">
+        <p class="kicker"><span class="idx">03</span>Tutorial · Twilio blog</p>
+        <h3>WhatsApp health chatbot</h3>
+        <p class="project-sum">A health-information chatbot that answers on WhatsApp, using Twilio&#x27;s WhatsApp API for messaging and Google Gemini for responses. Built end to end, then written up as a step-by-step guide.</p>
+        <ul class="stack"><li>Twilio</li><li>WhatsApp API</li><li>Gemini</li></ul>
+        <div class="project-links"><a class="tlink" href="https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide" target="_blank" rel="noopener">Read the tutorial <span aria-hidden="true">↗</span></a></div>
+      </article>
+      </div>
     </div>
-    <p class="updated">Last updated: <span>November 23, 2026</span></p>
-  </div>
-</header>
+  </section>
 
-<div class="fbar">
-  <div class="fi">
-    <button class="fb on" onclick="filter('all',this)">All</button>
-    <button class="fb" onclick="filter('dc',this)">DataCamp</button>
-    <button class="fb" onclick="filter('hm',this)">Hackmamba</button>
-    <button class="fb" onclick="filter('hn',this)">Hashnode</button>
-    <button class="fb" onclick="filter('med',this)">Medium</button>
-    <button class="fb" onclick="filter('str',this)">Strapi</button>
-    <button class="fb" onclick="filter('twi',this)">Twilio</button>
-    <button class="fb" onclick="filter('fcc',this)">freeCodeCamp</button>
-
-    <span class="fcount"><span id="cnt">47</span> articles</span>
-  </div>
-</div>
-
-<div class="main">
-  <p class="sh">Selected work</p>
-  <div class="grid" id="grid">
-    
-    <a class="card card-feat" data-p="dc" href="https://www.datacamp.com/blog/mistral-3" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">Featured</span>
-      </div>
-      <h2 class="card-title">Mistral 3: Inside the Model Family, Benchmarks &amp; Real-World Testing</h2>
-      <p class="card-excerpt">In-depth coverage of the full Mistral 3 family — Large 3, Ministral 14B, 8B, and 3B. Covers architecture, benchmark comparisons, multimodal testing, and enterprise use cases.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">LLMs</span><span class="t">AI</span><span class="t">Benchmarks</span></div>
-        <span class="read-btn">Read&nbsp;article</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/blog/mistral-le-chat" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">1</span>
-      </div>
-      <h2 class="card-title">Mistral Le Chat: Europe&#x27;s Answer to ChatGPT</h2>
-      <p class="card-excerpt">Coverage of Mistral&#x27;s AI assistant — fast responses, multilingual support, and GDPR compliance for European teams.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Mistral</span><span class="t">AI Assistant</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/blog/mistral-vibe-2-0" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">2</span>
-      </div>
-      <h2 class="card-title">Mistral Vibe 2.0: The Terminal-Based AI Coding Agent</h2>
-      <p class="card-excerpt">Guide to Mistral&#x27;s terminal-based agentic coding tool — capabilities, use cases, and developer workflows.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">AI Agents</span><span class="t">Coding</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/blog/rag-framework" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">3</span>
-      </div>
-      <h2 class="card-title">RAG Frameworks You Should Know: Open-Source Tools for Smarter AI</h2>
-      <p class="card-excerpt">Comparison of open-source RAG frameworks for building AI applications with external data sources.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">RAG</span><span class="t">LLMs</span><span class="t">Open Source</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/blog/reverse-etl" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">4</span>
-      </div>
-      <h2 class="card-title">What is Reverse ETL? A Helpful Guide</h2>
-      <p class="card-excerpt">Explains how reverse ETL moves warehouse data into operational tools like CRMs and marketing platforms.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Data Engineering</span><span class="t">ETL</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/blog/what-is-business-intelligence" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">5</span>
-      </div>
-      <h2 class="card-title">What Is Business Intelligence? All the Basics Covered</h2>
-      <p class="card-excerpt">Comprehensive introduction to BI — covering collection, analysis, visualization, and modern BI platforms.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">BI</span><span class="t">Data Analysis</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/tutorial/git-subtree" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">6</span>
-      </div>
-      <h2 class="card-title">Git Subtree Explained: A Practical Guide with Examples</h2>
-      <p class="card-excerpt">Step-by-step tutorial on using Git Subtree for modular repository management and dependency workflows.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Git</span><span class="t">DevTools</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/tutorial/git-pull" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">7</span>
-      </div>
-      <h2 class="card-title">Git Pull: Keeping Your Local Repository Up to Date</h2>
-      <p class="card-excerpt">Tutorial on git pull workflows, remote tracking, and keeping local repos synchronized with the team.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Git</span><span class="t">Version Control</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/tutorial/sql-transactions" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">8</span>
-      </div>
-      <h2 class="card-title">Understanding SQL Transactions: A Comprehensive Guide</h2>
-      <p class="card-excerpt">Detailed guide to SQL transactions — ACID properties, commit/rollback patterns, and concurrency control.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Databases</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/tutorial/brew-install-postgres" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">9</span>
-      </div>
-      <h2 class="card-title">How to Use Homebrew to Install PostgreSQL on Mac</h2>
-      <p class="card-excerpt">Practical setup guide for PostgreSQL on macOS using Homebrew — installation, path setup, and essential commands.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">PostgreSQL</span><span class="t">DevOps</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/tutorial/what-is-a-parquet-file" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">10</span>
-      </div>
-      <h2 class="card-title">What Is a Parquet File? Key Things to Know</h2>
-      <p class="card-excerpt">Explains Parquet&#x27;s columnar storage format, performance benefits, and when to use it in modern data pipelines.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Data Engineering</span><span class="t">Big Data</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/blog/nvidia-nemotron-3" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">11</span>
-      </div>
-      <h2 class="card-title">Nemotron 3: Architecture, Benchmarks, and Model Comparisons</h2>
-      <p class="card-excerpt">Technical coverage of NVIDIA&#x27;s Nemotron 3 — MoE architecture, throughput vs reasoning tradeoffs, and comparisons.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">LLMs</span><span class="t">NVIDIA</span><span class="t">AI</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="dc" href="https://www.datacamp.com/tutorial/python-backend-development" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eef4fd;color:#0f5bb5;">DataCamp</span>
-        <span class="card-num">12</span>
-      </div>
-      <h2 class="card-title">Python Backend Development: A Complete Guide for Beginners</h2>
-      <p class="card-excerpt">End-to-end guide covering Django, Flask, APIs, authentication, and deployment for Python backend development.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Backend</span><span class="t">Django</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card card-feat" data-p="hm" href="https://dev.to/actiandev/how-to-measure-rag-system-performance-1i1h" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#fff7ed;color:#c2410c;">Hackmamba</span>
-        <span class="card-num">Featured</span>
-      </div>
-      <h2 class="card-title">How to Measure RAG System Performance</h2>
-      <p class="card-excerpt">Deep-dive into evaluating RAG systems — covering metrics like faithfulness, relevance, and context precision.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">RAG</span><span class="t">AI Evaluation</span><span class="t">LLMs</span></div>
-        <span class="read-btn">Read&nbsp;article</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/machine-learning-with-python-and-sql/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">13</span>
-      </div>
-      <h2 class="card-title">How to Perform Machine Learning Tasks with Python and SQL</h2>
-      <p class="card-excerpt">Connecting Python ML pipelines to SQL databases using PyMySQL and Scikit-learn for real-world data tasks.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">ML</span><span class="t">Python</span><span class="t">SQL</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/automate-excel-tasks-with-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">14</span>
-      </div>
-      <h2 class="card-title">How to Automate Excel Tasks with Python</h2>
-      <p class="card-excerpt">Automating Excel workflows with Pandas, openpyxl, and pyautogui — data extraction, reporting, and visualisation.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Excel</span><span class="t">Pandas</span><span class="t">Automation</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/advanced-sql-techniques/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">15</span>
-      </div>
-      <h2 class="card-title">Advanced SQL Techniques for Complex Queries</h2>
-      <p class="card-excerpt">Window functions, CTEs, and advanced SQL patterns for data analysts working with complex datasets.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Analytics</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/data-analytics-roadmap/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">16</span>
-      </div>
-      <h2 class="card-title">How to Get Started in Data Analytics — A Roadmap for Beginners</h2>
-      <p class="card-excerpt">Career guide and structured learning roadmap for aspiring data analysts entering the field.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Data Analytics</span><span class="t">Career</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/automating-report-generation-from-sql-databases-using-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">17</span>
-      </div>
-      <h2 class="card-title">How to Generate Automated Reports from a SQL Database Using Python</h2>
-      <p class="card-excerpt">Python-powered automated report generation from SQL databases — reducing manual extraction and formatting time.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Python</span><span class="t">Reports</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/sql-tips-save-time-write-simpler-queries/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">18</span>
-      </div>
-      <h2 class="card-title">SQL Tips to Help You Save Time and Write Simpler Queries</h2>
-      <p class="card-excerpt">Practical SQL optimisation tips using aliases, joins, and subqueries for working data analysts.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Productivity</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/automate-sql-database-backups-using-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">19</span>
-      </div>
-      <h2 class="card-title">How to Automate SQL Database Backups Using Python</h2>
-      <p class="card-excerpt">Automating SQL database backup workflows with pyodbc and Pandas — faster, less error-prone backups.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Python</span><span class="t">Automation</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/how-to-read-and-write-data-to-a-sql-database-using-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">20</span>
-      </div>
-      <h2 class="card-title">How to Read and Write Data to a SQL Database Using Python</h2>
-      <p class="card-excerpt">CRUD operations on SQL databases using pymysql and psycopg2 — practical tutorial for data pipelines.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">SQL</span><span class="t">Databases</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/how-to-remove-duplicate-data-in-sql/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">21</span>
-      </div>
-      <h2 class="card-title">How to Remove Duplicate Data in SQL</h2>
-      <p class="card-excerpt">DISTINCT, GROUP BY, and INNER JOIN techniques for deduplicating SQL data — cleaner, faster databases.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Data Quality</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/how-to-search-large-datasets-in-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">22</span>
-      </div>
-      <h2 class="card-title">How to Effectively Search Large Datasets in Python</h2>
-      <p class="card-excerpt">Binary search, sets, and dictionaries for efficient lookup in large Python datasets.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Data</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/multi-dimensional-arrays-in-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">23</span>
-      </div>
-      <h2 class="card-title">Multi-Dimensional Arrays in Python — Matrices Explained with NumPy</h2>
-      <p class="card-excerpt">NumPy matrix operations with practical examples — bridging math concepts and Python implementation.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">NumPy</span><span class="t">Python</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/slicing-and-indexing-in-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">24</span>
-      </div>
-      <h2 class="card-title">Slicing and Indexing in Python — Explained with Examples</h2>
-      <p class="card-excerpt">Core Python data access concepts — list filtering, column extraction, and substring operations explained.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Data</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/how-to-use-conditional-statements-if-else-elif-in-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">25</span>
-      </div>
-      <h2 class="card-title">How to Use Conditional Statements in Python (if, else, elif)</h2>
-      <p class="card-excerpt">Practical guide to if, else, and elif statements in Python with real-world examples.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Beginners</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/how-to-use-loops-in-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">26</span>
-      </div>
-      <h2 class="card-title">How to Use Loops in Python</h2>
-      <p class="card-excerpt">For and while loops explained clearly — essential Python concepts with practical code examples.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Beginners</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/how-to-define-and-call-functions-in-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">27</span>
-      </div>
-      <h2 class="card-title">How to Define and Call Functions in Python</h2>
-      <p class="card-excerpt">Defining and calling functions in Python — improving code readability and reusability explained with examples.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Beginners</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/create-and-manipulate-tables-in-a-sql-database-using-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">28</span>
-      </div>
-      <h2 class="card-title">How to Create and Manipulate Tables in a SQL Database Using Python</h2>
-      <p class="card-excerpt">SQLite and Python for structured data table management — beginner-to-intermediate with clear examples.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQLite</span><span class="t">Python</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="fcc" href="https://www.freecodecamp.org/news/testing-and-debugging-sql-queries-with-python/" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">freeCodeCamp</span>
-        <span class="card-num">29</span>
-      </div>
-      <h2 class="card-title">How to Test and Debug SQL Queries with Python</h2>
-      <p class="card-excerpt">Techniques for testing and debugging SQL queries programmatically in Python — reliable data pipelines.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">SQL</span><span class="t">Testing</span><span class="t">Python</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/cometheartbeat/deploying-a-machine-learning-model-as-an-api-d3cbef264ce4" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">30</span>
-      </div>
-      <h2 class="card-title">Deploying a Machine Learning Model as an API</h2>
-      <p class="card-excerpt">Why it matters to deploy ML models to production, and how an API makes that practical — with step-by-step guidance.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">ML</span><span class="t">API</span><span class="t">Deployment</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://heartbeat.comet.ml/detecting-credit-card-fraud-with-machine-learning-644db0795edf" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">31</span>
-      </div>
-      <h2 class="card-title">Detecting Credit Card Fraud with Machine Learning</h2>
-      <p class="card-excerpt">Building a credit card fraud detection model — covering the dataset, feature engineering, and model evaluation.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">ML</span><span class="t">Fraud Detection</span><span class="t">Classification</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/cometheartbeat/logging-recommendation-system-visualizations-in-comet-2aeb14669c2e" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">32</span>
-      </div>
-      <h2 class="card-title">Logging Recommendation System Visualizations in Comet</h2>
-      <p class="card-excerpt">Building a movie recommendation system and logging visualizations in Comet for experiment tracking.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">ML</span><span class="t">Comet</span><span class="t">Recommender Systems</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/cometheartbeat/exploring-image-classification-with-kangas-c710c7a5a4d9" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">33</span>
-      </div>
-      <h2 class="card-title">Exploring Image Classification with Kangas</h2>
-      <p class="card-excerpt">Using Kangas to explore image classification — uploading images, labeling data, and visualising model performance.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">ML</span><span class="t">Computer Vision</span><span class="t">Kangas</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/cometheartbeat/tracking-your-sentiment-analysis-with-comet-3f94bd92a84f" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">34</span>
-      </div>
-      <h2 class="card-title">Tracking Your Sentiment Analysis with Comet</h2>
-      <p class="card-excerpt">Opinion mining with NLP — building and tracking a sentiment analysis model using Comet experiment tracking.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">NLP</span><span class="t">Sentiment Analysis</span><span class="t">Comet</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/cometheartbeat/monitoring-a-convolutional-neural-network-cnn-in-comet-702c2d51c839" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">35</span>
-      </div>
-      <h2 class="card-title">Monitoring a Convolutional Neural Network (CNN) in Comet</h2>
-      <p class="card-excerpt">Training an image classification CNN and monitoring its training metrics and performance using Comet.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Deep Learning</span><span class="t">CNN</span><span class="t">Comet</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/cometheartbeat/integrating-time-series-analysis-in-comet-293d1d0e2b22" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">36</span>
-      </div>
-      <h2 class="card-title">Integrating Time Series Analysis in Comet</h2>
-      <p class="card-excerpt">How to integrate time series forecasting workflows into Comet for experiment tracking and result logging.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Time Series</span><span class="t">ML</span><span class="t">Comet</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/@oluseyejeremiah" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">37</span>
-      </div>
-      <h2 class="card-title">MalarAI: Mobile Deep Learning for Malaria Detection in Low-Resource Settings</h2>
-      <p class="card-excerpt">MSc research write-up on EfficientNet-B0, Grad-CAM, and TensorFlow Lite for offline Android malaria detection.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Deep Learning</span><span class="t">Healthcare</span><span class="t">TFLite</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/@oluseyejeremiah/understanding-various-cloud-services-1f113496e9a5" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">38</span>
-      </div>
-      <h2 class="card-title">Understanding Various Cloud Services</h2>
-      <p class="card-excerpt">How cloud computing works, the various cloud service models, and types of cloud deployment explained clearly.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Cloud</span><span class="t">AWS</span><span class="t">Azure</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="med" href="https://medium.com/@oluseyejeremiah/understanding-azure-sql-elastic-pools-62f4980e8743" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0faf4;color:#15803d;">Medium</span>
-        <span class="card-num">39</span>
-      </div>
-      <h2 class="card-title">Understanding Azure SQL Elastic Pools</h2>
-      <p class="card-excerpt">Azure SQL Database and Elastic Pools explained — scalable, secure, cost-effective cloud database management.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Azure</span><span class="t">SQL</span><span class="t">Cloud</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="twi" href="https://www.twilio.com/en-us/blog/implement-robust-voice-authentication-go" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#fef9e6;color:#92400e;">Twilio</span>
-        <span class="card-num">40</span>
-      </div>
-      <h2 class="card-title">How to Implement a Robust Voice Authentication System with Go and Twilio</h2>
-      <p class="card-excerpt">Building a voice-based OTP system using Twilio Programmable Voice and Go — secure, accessible authentication.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Voice API</span><span class="t">Go</span><span class="t">Auth</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="twi" href="https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#fef9e6;color:#92400e;">Twilio</span>
-        <span class="card-num">41</span>
-      </div>
-      <h2 class="card-title">Creating a Health Chatbot Using Twilio and Gemini</h2>
-      <p class="card-excerpt">Building an intelligent healthcare chatbot with Twilio&#x27;s WhatsApp API and Google Gemini AI responses.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">WhatsApp API</span><span class="t">Gemini</span><span class="t">AI Chatbot</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="str" href="https://strapi.io/blog/how-to-build-a-to-do-app-using-next-js-and-strapi" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0fdff;color:#0e7490;">Strapi</span>
-        <span class="card-num">42</span>
-      </div>
-      <h2 class="card-title">How to Build a To-Do App Using Next.js and Strapi</h2>
-      <p class="card-excerpt">Full-stack To-Do app with Strapi&#x27;s headless CMS and Next.js — covering GraphQL, content types, and CRUD.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Next.js</span><span class="t">Strapi</span><span class="t">GraphQL</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="str" href="https://strapi.io/blog/how-to-build-a-hotel-management-app-using-strapi-and-nextjs" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#f0fdff;color:#0e7490;">Strapi</span>
-        <span class="card-num">43</span>
-      </div>
-      <h2 class="card-title">How to Build a Hotel Management App Using Strapi and Next.js</h2>
-      <p class="card-excerpt">End-to-end hotel booking system with auth, image upload, availability, and room selection using Strapi + Next.js.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Next.js</span><span class="t">Strapi</span><span class="t">Full-stack</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="hn" href="https://oluseyejeremiah.hashnode.dev/dealing-with-missing-values-in-a-dataset" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eff6ff;color:#2563eb;">Hashnode</span>
-        <span class="card-num">44</span>
-      </div>
-      <h2 class="card-title">Dealing with Missing Values in a Dataset</h2>
-      <p class="card-excerpt">Common causes of missing data and techniques to handle them — imputation, deletion, and best practices.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Python</span><span class="t">Data Cleaning</span><span class="t">ML</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-    <a class="card" data-p="hn" href="https://oluseyejeremiah.hashnode.dev/explaining-the-differences-between-saaspaas-and-iaas" target="_blank" rel="noopener">
-      <div class="card-top">
-        <span class="platform" style="background:#eff6ff;color:#2563eb;">Hashnode</span>
-        <span class="card-num">45</span>
-      </div>
-      <h2 class="card-title">Explaining the Differences Between SaaS, PaaS and IaaS</h2>
-      <p class="card-excerpt">Clear breakdown of the three cloud service models — features, advantages, disadvantages, and when to use each.</p>
-      <div class="card-foot">
-        <div class="tags"><span class="t">Cloud</span><span class="t">SaaS</span><span class="t">IaaS</span></div>
-        <span class="read-btn">Read</span>
-      </div>
-    </a>
-  </div>
-
-  <div class="see-all-row">
-    <a class="see-all" href="https://www.freecodecamp.org/news/author/oluseye-jeremiah/" target="_blank" rel="noopener">All freeCodeCamp articles</a>
-    <a class="see-all" href="https://www.datacamp.com/blog" target="_blank" rel="noopener">All DataCamp articles</a>
-    <a class="see-all" href="https://medium.com/@oluseyejeremiah" target="_blank" rel="noopener">All Medium articles</a>
-    <a class="see-all" href="https://www.twilio.com/en-us/blog/authors/author.oluseye-jeremiah" target="_blank" rel="noopener">All Twilio articles</a>
-    <a class="see-all" href="https://dev.to/actiandev" target="_blank" rel="noopener">All Hackmamba articles</a>
-    
-  </div>
-
-  <div class="about">
-    <div>
-      <p class="al">About</p>
-      <h2 class="an">Oluseye Jeremiah Oluwapelumi</h2>
-      <p class="at">
-        <strong>BSc Computer Science · MSc Data Science</strong>, University of Ibadan, Nigeria.<br><br>
-        Technical writer published across DataCamp, freeCodeCamp (Top Contributor 2023),
-        Hackmamba, Twilio, Strapi, Medium, Hashnode, and Dev.to — covering AI models,
-        machine learning, data engineering, developer tooling, and full-stack tutorials.<br><br>
-        Ex-Microsoft Learn Student Ambassador · Ex-GDSC Core Team Member.
-        ML educator through Inventors. Researcher working on <strong>MalarAI</strong> —
-        mobile deep learning platform for malaria detection.
-      </p>
+  <section id="healthcare">
+    <div class="wrap health">
+      <div class="health-copy">
+        <p class="eyebrow">Focus</p>
+        <h2>AI in healthcare</h2>
+        <p>My MSc research produced <strong>MalarAI</strong>, an on-device model that screens blood smears for malaria where connectivity is unreliable. I'm drawn to the same problem everywhere: making clinical AI accurate, explainable and usable in low-resource settings.</p>
+        <p>These are the health-focused builds and tutorials I've published so far.</p>
+      </div>
+      <ul class="hlist">
+        <li><a href="https://medium.com/@oluseyejeremiah/building-an-effective-and-user-friendly-medical-chatbot-with-openai-and-cometllm-a-step-by-step-0c822f9bf47b" target="_blank" rel="noopener">
+          <span class="h-meta">Medium · Mar 2024</span>
+          <span class="h-title">Building an Effective and User-Friendly Medical Chatbot with OpenAI and CometLLM</span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a href="https://medium.com/@oluseyejeremiah/building-a-healthbot-using-chainlit-and-openai-6f131f5e4b66" target="_blank" rel="noopener">
+          <span class="h-meta">Medium · Jan 2024</span>
+          <span class="h-title">Building a HealthBot Using Chainlit and OpenAI</span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a href="https://medium.com/@oluseyejeremiah/building-a-heart-disease-prediction-model-using-machine-learning-4c690243a93e" target="_blank" rel="noopener">
+          <span class="h-meta">Medium · Jan 2024</span>
+          <span class="h-title">Building a Heart Disease Prediction Model Using Machine Learning</span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a></li>
+        <li><a href="https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide" target="_blank" rel="noopener">
+          <span class="h-meta">Twilio</span>
+          <span class="h-title">Creating a Health Chatbot Using Twilio and Gemini</span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a></li>
+      </ul>
     </div>
-    <div>
-      <p class="al">Published on</p>
-      <div class="plist">
-        
-      <a class="plat-row" href="https://www.datacamp.com/blog" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#0f5bb5;"></div>
-        <span class="plat-name">DataCamp</span>
-        <span class="plat-desc">AI, ML, SQL, Git</span>
-        <span class="plat-arr">↗</span>
+  </section>
+
+  <section id="selected">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Selected writing</p><h2>Start with these</h2></div>
+        <p class="sec-note">Model deep-dives, evaluation, API tutorials and full-stack builds.</p>
+      </div>
+      <div class="feats">
+      <a class="feat feat-lead" href="https://dev.to/oluseyej/i-mapped-772-ai-agent-skill-repos-on-github-heres-what-was-actually-in-them-jpn" target="_blank" rel="noopener">
+        <span class="feat-meta"><span class="dot" style="background:#7a7a7a"></span>Dev.to<span class="feat-tags">AI Agents · Web Scraping · Data</span></span>
+        <h3>I Mapped 772 AI Agent Skill Repos on GitHub. Here&#x27;s What Was Actually in Them</h3>
+        <p>How I used Spidra Map to discover, clean and verify 772 agent skill repositories, built Skill Bank around them, and what the data showed.</p>
+        <span class="read">Read <span aria-hidden="true">→</span></span>
       </a>
-      <a class="plat-row" href="https://www.freecodecamp.org/news/author/oluseye-jeremiah/" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#15803d;"></div>
-        <span class="plat-name">freeCodeCamp</span>
-        <span class="plat-desc">Python, SQL, Data · 14+ articles</span>
-        <span class="plat-arr">↗</span>
+      <a class="feat" href="https://www.datacamp.com/blog/mistral-3" target="_blank" rel="noopener">
+        <span class="feat-meta"><span class="dot" style="background:#2f6fd6"></span>DataCamp<span class="feat-tags">LLMs · AI · Benchmarks</span></span>
+        <h3>Mistral 3: Inside the Model Family, Benchmarks &amp; Real-World Testing</h3>
+        <p>In-depth coverage of the full Mistral 3 family — Large 3, Ministral 14B, 8B, and 3B. Covers architecture, benchmark comparisons, multimodal testing, and enterprise use cases.</p>
+        <span class="read">Read <span aria-hidden="true">→</span></span>
       </a>
-      <a class="plat-row" href="https://dev.to/actiandev" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#c2410c;"></div>
-        <span class="plat-name">Hackmamba</span>
-        <span class="plat-desc">AI, Developer tools · 50+ articles</span>
-        <span class="plat-arr">↗</span>
+      <a class="feat" href="https://dev.to/actiandev/how-to-measure-rag-system-performance-1i1h" target="_blank" rel="noopener">
+        <span class="feat-meta"><span class="dot" style="background:#d9631e"></span>Hackmamba<span class="feat-tags">RAG · AI Evaluation · LLMs</span></span>
+        <h3>How to Measure RAG System Performance</h3>
+        <p>Deep-dive into evaluating RAG systems — covering metrics like faithfulness, relevance, and context precision.</p>
+        <span class="read">Read <span aria-hidden="true">→</span></span>
       </a>
-      <a class="plat-row" href="https://medium.com/@oluseyejeremiah" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#15803d;"></div>
-        <span class="plat-name">Medium</span>
-        <span class="plat-desc">ML, AI, Cloud</span>
-        <span class="plat-arr">↗</span>
+      <a class="feat" href="https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide" target="_blank" rel="noopener">
+        <span class="feat-meta"><span class="dot" style="background:#e0313b"></span>Twilio<span class="feat-tags">WhatsApp API · Gemini · AI Chatbot</span></span>
+        <h3>Creating a Health Chatbot Using Twilio and Gemini</h3>
+        <p>Building an intelligent healthcare chatbot with Twilio&#x27;s WhatsApp API and Google Gemini AI responses.</p>
+        <span class="read">Read <span aria-hidden="true">→</span></span>
       </a>
-      <a class="plat-row" href="https://www.twilio.com/en-us/blog/authors/author.oluseye-jeremiah" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#92400e;"></div>
-        <span class="plat-name">Twilio</span>
-        <span class="plat-desc">API, Voice, AI</span>
-        <span class="plat-arr">↗</span>
-      </a>
-      <a class="plat-row" href="https://strapi.io/user/oluseye-jeremiah" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#0e7490;"></div>
-        <span class="plat-name">Strapi</span>
-        <span class="plat-desc">Next.js, Headless CMS</span>
-        <span class="plat-arr">↗</span>
-      </a>
-      <a class="plat-row" href="https://oluseyejeremiah.hashnode.dev" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#2563eb;"></div>
-        <span class="plat-name">Hashnode</span>
-        <span class="plat-desc">Data Science, Cloud</span>
-        <span class="plat-arr">↗</span>
-      </a>
-      <a class="plat-row" href="https://dev.to/oluseyej" target="_blank" rel="noopener">
-        <div class="plat-dot" style="background:#6d28d9;"></div>
-        <span class="plat-name">Dev.to</span>
-        <span class="plat-desc">AI Agents, Dev Tools</span>
-        <span class="plat-arr">↗</span>
+      <a class="feat" href="https://strapi.io/blog/how-to-build-a-hotel-management-app-using-strapi-and-nextjs" target="_blank" rel="noopener">
+        <span class="feat-meta"><span class="dot" style="background:#5b4fe9"></span>Strapi<span class="feat-tags">Next.js · Strapi · Full-stack</span></span>
+        <h3>How to Build a Hotel Management App Using Strapi and Next.js</h3>
+        <p>End-to-end hotel booking system with auth, image upload, availability, and room selection using Strapi + Next.js.</p>
+        <span class="read">Read <span aria-hidden="true">→</span></span>
       </a>
       </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <section id="writing">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow">Archive</p><h2>All writing</h2></div>
+      </div>
+      <div class="tools">
+        <input class="search" id="q" type="search" placeholder="Search titles, tools or topics, e.g. RAG, SQL, Twilio" aria-label="Search articles">
+        <select class="select" id="plat" aria-label="Filter by publication"><option value="all">All publications</option><option value="medium">Medium (18)</option><option value="freecodecamp">freeCodeCamp (17)</option><option value="datacamp">DataCamp (13)</option><option value="hackmamba">Hackmamba (7)</option><option value="hashnode">Hashnode (2)</option><option value="strapi">Strapi (2)</option><option value="twilio">Twilio (2)</option><option value="devto">Dev.to (1)</option></select>
+      </div>
+      <div class="chips" role="group" aria-label="Filter by topic"><button class="chip on" data-t="all" aria-pressed="true">All <span>62</span></button><button class="chip" data-t="healthcareai" aria-pressed="false">Healthcare AI <span>4</span></button><button class="chip" data-t="agentsrag" aria-pressed="false">Agents &amp; RAG <span>14</span></button><button class="chip" data-t="llmsgenai" aria-pressed="false">LLMs &amp; GenAI <span>13</span></button><button class="chip" data-t="machinelearning" aria-pressed="false">Machine Learning <span>18</span></button><button class="chip" data-t="datasql" aria-pressed="false">Data &amp; SQL <span>27</span></button><button class="chip" data-t="devtoolsapis" aria-pressed="false">Dev tools &amp; APIs <span>14</span></button><button class="chip" data-t="python" aria-pressed="false">Python <span>19</span></button></div>
+      <p class="count"><span id="cnt">62</span> articles</p>
+      <ul class="rows">
+      <li><a class="row" data-p="devto" data-t="agentsrag datasql devtoolsapis" data-s="i mapped 772 ai agent skill repos on github. here&#x27;s what was actually in them dev.to how i used spidra map to discover, clean and verify 772 agent skill repositories, built skill bank around them, and what the data showed. ai agents web scraping data agents &amp; rag data &amp; sql dev tools &amp; apis" href="https://dev.to/oluseyej/i-mapped-772-ai-agent-skill-repos-on-github-heres-what-was-actually-in-them-jpn" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">I Mapped 772 AI Agent Skill Repos on GitHub. Here&#x27;s What Was Actually in Them</span><span class="row-plat"><span class="dot" style="background:#7a7a7a"></span>Dev.to · Nov 2026</span></span>
+        <span class="row-tags"><span>AI Agents</span><span>Web Scraping</span><span>Data</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag llmsgenai python" data-s="how we did entity resolution with a vector db and argon hackmamba matching messy records that refer to the same real-world entity, using vector search and argon. vector db llms python agents &amp; rag llms &amp; genai python" href="https://dev.to/actiandev/how-we-did-entity-resolution-with-a-vector-db-and-argon-159l" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How We Did Entity Resolution with a Vector DB and Argon</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · Nov 2026</span></span>
+        <span class="row-tags"><span>Vector DB</span><span>LLMs</span><span>Python</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag python" data-s="build a local ai agent on a raspberry pi 5 with vectorai db hackmamba a hands-on build of an ai agent that runs fully on a raspberry pi 5, with vectorai db for local retrieval. ai agents edge ai python agents &amp; rag python" href="https://dev.to/actiandev/build-a-local-ai-agent-on-a-raspberry-pi-5-with-vectorai-db-105b" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Build a Local AI Agent on a Raspberry Pi 5 with VectorAI DB</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · Oct 2026</span></span>
+        <span class="row-tags"><span>AI Agents</span><span>Edge AI</span><span>Python</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag" data-s="how regenesis built medshift&#x27;s self-healing loop with vectorai db hackmamba case study: how the regenesis team designed a self-healing agent loop for medshift on top of vectorai db. ai agents architecture vector db agents &amp; rag" href="https://dev.to/actiandev/how-regenesis-built-medshifts-self-healing-loop-with-vectorai-db-3g77" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How Regenesis Built MedShift&#x27;s Self-Healing Loop with VectorAI DB</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · Oct 2026</span></span>
+        <span class="row-tags"><span>AI Agents</span><span>Architecture</span><span>Vector DB</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag llmsgenai" data-s="build a local rag pipeline on declassified ufo files with vectorai db and ollama hackmamba a fully local rag pipeline over declassified documents, using vectorai db for retrieval and ollama for generation. rag ollama local llms agents &amp; rag llms &amp; genai" href="https://dev.to/actiandev/build-a-local-rag-pipeline-on-declassified-ufo-files-with-vectorai-db-and-ollama-7fc" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Build a Local RAG Pipeline on Declassified UFO Files with VectorAI DB and Ollama</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · Jul 2026</span></span>
+        <span class="row-tags"><span>RAG</span><span>Ollama</span><span>Local LLMs</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag" data-s="how to build persistent agent memory across sessions hackmamba giving ai agents memory that survives between sessions, with patterns for storing and recalling context. ai agents memory rag agents &amp; rag" href="https://dev.to/actiandev/how-to-build-persistent-agent-memory-across-sessions-117" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Build Persistent Agent Memory Across Sessions</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · Jul 2026</span></span>
+        <span class="row-tags"><span>AI Agents</span><span>Memory</span><span>RAG</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag machinelearning datasql" data-s="the hidden cost of vector database pricing models hackmamba how vector database pricing models compare and where the hidden costs show up as you scale. vector db infrastructure agents &amp; rag machine learning data &amp; sql" href="https://dev.to/actiandev/the-hidden-cost-of-vector-database-pricing-models-n45" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">The Hidden Cost of Vector Database Pricing Models</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · May 2026</span></span>
+        <span class="row-tags"><span>Vector DB</span><span>Infrastructure</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hackmamba" data-t="agentsrag llmsgenai" data-s="how to measure rag system performance hackmamba deep-dive into evaluating rag systems — covering metrics like faithfulness, relevance, and context precision. rag ai evaluation llms agents &amp; rag llms &amp; genai" href="https://dev.to/actiandev/how-to-measure-rag-system-performance-1i1h" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Measure RAG System Performance</span><span class="row-plat"><span class="dot" style="background:#d9631e"></span>Hackmamba · Mar 2026</span></span>
+        <span class="row-tags"><span>RAG</span><span>AI Evaluation</span><span>LLMs</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="devtoolsapis" data-s="why graphql adoption keeps growing: benefits and limitations medium why teams keep adopting graphql, and the trade-offs to weigh against rest. graphql apis dev tools &amp; apis" href="https://medium.com/@oluseyejeremiah/why-graphql-adoption-keeps-growing-benefits-and-limitations-9c5408c902ff" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Why GraphQL Adoption Keeps Growing: Benefits and Limitations</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Oct 2025</span></span>
+        <span class="row-tags"><span>GraphQL</span><span>APIs</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="healthcareai llmsgenai datasql" data-s="building an effective and user-friendly medical chatbot with openai and cometllm medium a step-by-step medical chatbot build with openai, using cometllm to log and track prompts. healthcare ai llms llmops healthcare ai llms &amp; genai data &amp; sql" href="https://medium.com/@oluseyejeremiah/building-an-effective-and-user-friendly-medical-chatbot-with-openai-and-cometllm-a-step-by-step-0c822f9bf47b" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Building an Effective and User-Friendly Medical Chatbot with OpenAI and CometLLM</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Mar 2024</span></span>
+        <span class="row-tags"><span>Healthcare AI</span><span>LLMs</span><span>LLMOps</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="llmsgenai datasql" data-s="exploring the titanic dataset using yolopandas and comet medium exploratory analysis of the titanic dataset with yolopandas, a natural-language interface for pandas. pandas llms comet llms &amp; genai data &amp; sql" href="https://medium.com/@oluseyejeremiah/exploring-the-titanic-dataset-using-yolopandas-and-comet-173c0df9bde" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Exploring the Titanic Dataset Using YOLOPandas and Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Mar 2024</span></span>
+        <span class="row-tags"><span>Pandas</span><span>LLMs</span><span>Comet</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="healthcareai llmsgenai machinelearning" data-s="building a healthbot using chainlit and openai medium building a conversational health-information assistant with a chainlit interface and openai models. healthcare ai llms chainlit healthcare ai llms &amp; genai machine learning" href="https://medium.com/@oluseyejeremiah/building-a-healthbot-using-chainlit-and-openai-6f131f5e4b66" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Building a HealthBot Using Chainlit and OpenAI</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Jan 2024</span></span>
+        <span class="row-tags"><span>Healthcare AI</span><span>LLMs</span><span>Chainlit</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="healthcareai machinelearning" data-s="building a heart disease prediction model using machine learning medium training and evaluating a classifier that predicts heart disease risk from clinical features. healthcare ai ml classification healthcare ai machine learning" href="https://medium.com/@oluseyejeremiah/building-a-heart-disease-prediction-model-using-machine-learning-4c690243a93e" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Building a Heart Disease Prediction Model Using Machine Learning</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Jan 2024</span></span>
+        <span class="row-tags"><span>Healthcare AI</span><span>ML</span><span>Classification</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning" data-s="managing tensorflow/keras model development with comet medium a step-by-step workflow for tracking tensorflow/keras experiments with comet. deep learning tensorflow mlops machine learning" href="https://heartbeat.comet.ml/a-step-by-step-guide-efficiently-managing-tensorflow-keras-model-development-with-comet-c44476a8e3c3" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Managing TensorFlow/Keras Model Development with Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Nov 2023</span></span>
+        <span class="row-tags"><span>Deep Learning</span><span>TensorFlow</span><span>MLOps</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="llmsgenai" data-s="getting started with comet&#x27;s llmops medium an introduction to tracking and debugging llm prompts and chains with comet&#x27;s llmops tools. llmops llms comet llms &amp; genai" href="https://heartbeat.comet.ml/getting-started-with-comets-llmops-40ce27bddb42" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Getting Started with Comet&#x27;s LLMOps</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Oct 2023</span></span>
+        <span class="row-tags"><span>LLMOps</span><span>LLMs</span><span>Comet</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning python" data-s="image segmentation techniques in computer vision medium an overview of the main image segmentation approaches in computer vision, with python examples. computer vision deep learning machine learning python" href="https://heartbeat.comet.ml/image-segmentation-techniques-in-computer-vision-68eb3c2c20d3" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Image Segmentation Techniques in Computer Vision</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Aug 2023</span></span>
+        <span class="row-tags"><span>Computer Vision</span><span>Deep Learning</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning" data-s="monitoring your cv model: a beginner&#x27;s guide using kangas and comet medium monitoring a computer vision model&#x27;s predictions and performance with kangas and comet. computer vision mlops comet machine learning" href="https://heartbeat.comet.ml/monitoring-your-cv-model-a-beginners-guide-using-kangas-and-comet-4d70af55c1ef" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Monitoring Your CV Model: A Beginner&#x27;s Guide Using Kangas and Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · May 2023</span></span>
+        <span class="row-tags"><span>Computer Vision</span><span>MLOps</span><span>Comet</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning" data-s="monitoring a convolutional neural network (cnn) in comet medium training an image classification cnn and monitoring its training metrics and performance using comet. deep learning cnn comet machine learning" href="https://medium.com/cometheartbeat/monitoring-a-convolutional-neural-network-cnn-in-comet-702c2d51c839" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Monitoring a Convolutional Neural Network (CNN) in Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium · Mar 2023</span></span>
+        <span class="row-tags"><span>Deep Learning</span><span>CNN</span><span>Comet</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hashnode" data-t="datasql python" data-s="dealing with missing values in a dataset hashnode common causes of missing data and techniques to handle them — imputation, deletion, and best practices. python data cleaning ml data &amp; sql python" href="https://oluseyejeremiah.hashnode.dev/dealing-with-missing-values-in-a-dataset" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Dealing with Missing Values in a Dataset</span><span class="row-plat"><span class="dot" style="background:#2962ff"></span>Hashnode · May 2022</span></span>
+        <span class="row-tags"><span>Python</span><span>Data Cleaning</span><span>ML</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="hashnode" data-t="machinelearning devtoolsapis" data-s="explaining the differences between saas, paas and iaas hashnode clear breakdown of the three cloud service models — features, advantages, disadvantages, and when to use each. cloud saas iaas machine learning dev tools &amp; apis" href="https://oluseyejeremiah.hashnode.dev/explaining-the-differences-between-saaspaas-and-iaas" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Explaining the Differences Between SaaS, PaaS and IaaS</span><span class="row-plat"><span class="dot" style="background:#2962ff"></span>Hashnode · May 2022</span></span>
+        <span class="row-tags"><span>Cloud</span><span>SaaS</span><span>IaaS</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="agentsrag llmsgenai machinelearning" data-s="mistral 3: inside the model family, benchmarks &amp; real-world testing datacamp in-depth coverage of the full mistral 3 family — large 3, ministral 14b, 8b, and 3b. covers architecture, benchmark comparisons, multimodal testing, and enterprise use cases. llms ai benchmarks agents &amp; rag llms &amp; genai machine learning" href="https://www.datacamp.com/blog/mistral-3" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Mistral 3: Inside the Model Family, Benchmarks &amp; Real-World Testing</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>LLMs</span><span>AI</span><span>Benchmarks</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="agentsrag llmsgenai" data-s="mistral le chat: europe&#x27;s answer to chatgpt datacamp coverage of mistral&#x27;s ai assistant — fast responses, multilingual support, and gdpr compliance for european teams. mistral ai assistant agents &amp; rag llms &amp; genai" href="https://www.datacamp.com/blog/mistral-le-chat" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Mistral Le Chat: Europe&#x27;s Answer to ChatGPT</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>Mistral</span><span>AI Assistant</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="agentsrag llmsgenai" data-s="mistral vibe 2.0: the terminal-based ai coding agent datacamp guide to mistral&#x27;s terminal-based agentic coding tool — capabilities, use cases, and developer workflows. ai agents coding agents &amp; rag llms &amp; genai" href="https://www.datacamp.com/blog/mistral-vibe-2-0" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Mistral Vibe 2.0: The Terminal-Based AI Coding Agent</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>AI Agents</span><span>Coding</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="agentsrag llmsgenai datasql" data-s="rag frameworks you should know: open-source tools for smarter ai datacamp comparison of open-source rag frameworks for building ai applications with external data sources. rag llms open source agents &amp; rag llms &amp; genai data &amp; sql" href="https://www.datacamp.com/blog/rag-framework" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">RAG Frameworks You Should Know: Open-Source Tools for Smarter AI</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>RAG</span><span>LLMs</span><span>Open Source</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="datasql" data-s="what is reverse etl? a helpful guide datacamp explains how reverse etl moves warehouse data into operational tools like crms and marketing platforms. data engineering etl data &amp; sql" href="https://www.datacamp.com/blog/reverse-etl" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">What is Reverse ETL? A Helpful Guide</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>Data Engineering</span><span>ETL</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="datasql" data-s="what is business intelligence? all the basics covered datacamp comprehensive introduction to bi — covering collection, analysis, visualization, and modern bi platforms. bi data analysis data &amp; sql" href="https://www.datacamp.com/blog/what-is-business-intelligence" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">What Is Business Intelligence? All the Basics Covered</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>BI</span><span>Data Analysis</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="devtoolsapis" data-s="git subtree explained: a practical guide with examples datacamp step-by-step tutorial on using git subtree for modular repository management and dependency workflows. git devtools dev tools &amp; apis" href="https://www.datacamp.com/tutorial/git-subtree" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Git Subtree Explained: A Practical Guide with Examples</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>Git</span><span>DevTools</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="devtoolsapis" data-s="git pull: keeping your local repository up to date datacamp tutorial on git pull workflows, remote tracking, and keeping local repos synchronized with the team. git version control dev tools &amp; apis" href="https://www.datacamp.com/tutorial/git-pull" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Git Pull: Keeping Your Local Repository Up to Date</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>Git</span><span>Version Control</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="datasql" data-s="understanding sql transactions: a comprehensive guide datacamp detailed guide to sql transactions — acid properties, commit/rollback patterns, and concurrency control. sql databases data &amp; sql" href="https://www.datacamp.com/tutorial/sql-transactions" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Understanding SQL Transactions: A Comprehensive Guide</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Databases</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="datasql devtoolsapis" data-s="how to use homebrew to install postgresql on mac datacamp practical setup guide for postgresql on macos using homebrew — installation, path setup, and essential commands. postgresql devops data &amp; sql dev tools &amp; apis" href="https://www.datacamp.com/tutorial/brew-install-postgres" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Use Homebrew to Install PostgreSQL on Mac</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>PostgreSQL</span><span>DevOps</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="agentsrag datasql" data-s="what is a parquet file? key things to know datacamp explains parquet&#x27;s columnar storage format, performance benefits, and when to use it in modern data pipelines. data engineering big data agents &amp; rag data &amp; sql" href="https://www.datacamp.com/tutorial/what-is-a-parquet-file" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">What Is a Parquet File? Key Things to Know</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>Data Engineering</span><span>Big Data</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="agentsrag llmsgenai machinelearning" data-s="nemotron 3: architecture, benchmarks, and model comparisons datacamp technical coverage of nvidia&#x27;s nemotron 3 — moe architecture, throughput vs reasoning tradeoffs, and comparisons. llms nvidia ai agents &amp; rag llms &amp; genai machine learning" href="https://www.datacamp.com/blog/nvidia-nemotron-3" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Nemotron 3: Architecture, Benchmarks, and Model Comparisons</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>LLMs</span><span>NVIDIA</span><span>AI</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="datacamp" data-t="devtoolsapis python" data-s="python backend development: a complete guide for beginners datacamp end-to-end guide covering django, flask, apis, authentication, and deployment for python backend development. python backend django dev tools &amp; apis python" href="https://www.datacamp.com/tutorial/python-backend-development" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Python Backend Development: A Complete Guide for Beginners</span><span class="row-plat"><span class="dot" style="background:#2f6fd6"></span>DataCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>Backend</span><span>Django</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="machinelearning datasql python" data-s="how to perform machine learning tasks with python and sql freecodecamp connecting python ml pipelines to sql databases using pymysql and scikit-learn for real-world data tasks. ml python sql machine learning data &amp; sql python" href="https://www.freecodecamp.org/news/machine-learning-with-python-and-sql/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Perform Machine Learning Tasks with Python and SQL</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>ML</span><span>Python</span><span>SQL</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to automate excel tasks with python freecodecamp automating excel workflows with pandas, openpyxl, and pyautogui — data extraction, reporting, and visualisation. excel pandas automation data &amp; sql python" href="https://www.freecodecamp.org/news/automate-excel-tasks-with-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Automate Excel Tasks with Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Excel</span><span>Pandas</span><span>Automation</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="advanced sql techniques for complex queries freecodecamp window functions, ctes, and advanced sql patterns for data analysts working with complex datasets. sql analytics data &amp; sql python" href="https://www.freecodecamp.org/news/advanced-sql-techniques/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Advanced SQL Techniques for Complex Queries</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Analytics</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql" data-s="how to get started in data analytics — a roadmap for beginners freecodecamp career guide and structured learning roadmap for aspiring data analysts entering the field. data analytics career data &amp; sql" href="https://www.freecodecamp.org/news/data-analytics-roadmap/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Get Started in Data Analytics — A Roadmap for Beginners</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Data Analytics</span><span>Career</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to generate automated reports from a sql database using python freecodecamp python-powered automated report generation from sql databases — reducing manual extraction and formatting time. sql python reports data &amp; sql python" href="https://www.freecodecamp.org/news/automating-report-generation-from-sql-databases-using-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Generate Automated Reports from a SQL Database Using Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Python</span><span>Reports</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql" data-s="sql tips to help you save time and write simpler queries freecodecamp practical sql optimisation tips using aliases, joins, and subqueries for working data analysts. sql productivity data &amp; sql" href="https://www.freecodecamp.org/news/sql-tips-save-time-write-simpler-queries/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">SQL Tips to Help You Save Time and Write Simpler Queries</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Productivity</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to automate sql database backups using python freecodecamp automating sql database backup workflows with pyodbc and pandas — faster, less error-prone backups. sql python automation data &amp; sql python" href="https://www.freecodecamp.org/news/automate-sql-database-backups-using-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Automate SQL Database Backups Using Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Python</span><span>Automation</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to read and write data to a sql database using python freecodecamp crud operations on sql databases using pymysql and psycopg2 — practical tutorial for data pipelines. python sql databases data &amp; sql python" href="https://www.freecodecamp.org/news/how-to-read-and-write-data-to-a-sql-database-using-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Read and Write Data to a SQL Database Using Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>SQL</span><span>Databases</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql" data-s="how to remove duplicate data in sql freecodecamp distinct, group by, and inner join techniques for deduplicating sql data — cleaner, faster databases. sql data quality data &amp; sql" href="https://www.freecodecamp.org/news/how-to-remove-duplicate-data-in-sql/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Remove Duplicate Data in SQL</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Data Quality</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to effectively search large datasets in python freecodecamp binary search, sets, and dictionaries for efficient lookup in large python datasets. python data data &amp; sql python" href="https://www.freecodecamp.org/news/how-to-search-large-datasets-in-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Effectively Search Large Datasets in Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>Data</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="python" data-s="multi-dimensional arrays in python — matrices explained with numpy freecodecamp numpy matrix operations with practical examples — bridging math concepts and python implementation. numpy python python" href="https://www.freecodecamp.org/news/multi-dimensional-arrays-in-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Multi-Dimensional Arrays in Python — Matrices Explained with NumPy</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>NumPy</span><span>Python</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="slicing and indexing in python — explained with examples freecodecamp core python data access concepts — list filtering, column extraction, and substring operations explained. python data data &amp; sql python" href="https://www.freecodecamp.org/news/slicing-and-indexing-in-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Slicing and Indexing in Python — Explained with Examples</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>Data</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="python" data-s="how to use conditional statements in python (if, else, elif) freecodecamp practical guide to if, else, and elif statements in python with real-world examples. python beginners python" href="https://www.freecodecamp.org/news/how-to-use-conditional-statements-if-else-elif-in-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Use Conditional Statements in Python (if, else, elif)</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>Beginners</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="python" data-s="how to use loops in python freecodecamp for and while loops explained clearly — essential python concepts with practical code examples. python beginners python" href="https://www.freecodecamp.org/news/how-to-use-loops-in-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Use Loops in Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>Beginners</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="python" data-s="how to define and call functions in python freecodecamp defining and calling functions in python — improving code readability and reusability explained with examples. python beginners python" href="https://www.freecodecamp.org/news/how-to-define-and-call-functions-in-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Define and Call Functions in Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>Python</span><span>Beginners</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to create and manipulate tables in a sql database using python freecodecamp sqlite and python for structured data table management — beginner-to-intermediate with clear examples. sqlite python data &amp; sql python" href="https://www.freecodecamp.org/news/create-and-manipulate-tables-in-a-sql-database-using-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Create and Manipulate Tables in a SQL Database Using Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQLite</span><span>Python</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="freecodecamp" data-t="datasql python" data-s="how to test and debug sql queries with python freecodecamp techniques for testing and debugging sql queries programmatically in python — reliable data pipelines. sql testing python data &amp; sql python" href="https://www.freecodecamp.org/news/testing-and-debugging-sql-queries-with-python/" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Test and Debug SQL Queries with Python</span><span class="row-plat"><span class="dot" style="background:#1f8a4c"></span>freeCodeCamp</span></span>
+        <span class="row-tags"><span>SQL</span><span>Testing</span><span>Python</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning devtoolsapis" data-s="deploying a machine learning model as an api medium why it matters to deploy ml models to production, and how an api makes that practical — with step-by-step guidance. ml api deployment machine learning dev tools &amp; apis" href="https://medium.com/cometheartbeat/deploying-a-machine-learning-model-as-an-api-d3cbef264ce4" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Deploying a Machine Learning Model as an API</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>ML</span><span>API</span><span>Deployment</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning datasql" data-s="detecting credit card fraud with machine learning medium building a credit card fraud detection model — covering the dataset, feature engineering, and model evaluation. ml fraud detection classification machine learning data &amp; sql" href="https://heartbeat.comet.ml/detecting-credit-card-fraud-with-machine-learning-644db0795edf" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Detecting Credit Card Fraud with Machine Learning</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>ML</span><span>Fraud Detection</span><span>Classification</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning" data-s="logging recommendation system visualizations in comet medium building a movie recommendation system and logging visualizations in comet for experiment tracking. ml comet recommender systems machine learning" href="https://medium.com/cometheartbeat/logging-recommendation-system-visualizations-in-comet-2aeb14669c2e" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Logging Recommendation System Visualizations in Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>ML</span><span>Comet</span><span>Recommender Systems</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning datasql" data-s="exploring image classification with kangas medium using kangas to explore image classification — uploading images, labeling data, and visualising model performance. ml computer vision kangas machine learning data &amp; sql" href="https://medium.com/cometheartbeat/exploring-image-classification-with-kangas-c710c7a5a4d9" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Exploring Image Classification with Kangas</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>ML</span><span>Computer Vision</span><span>Kangas</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning" data-s="tracking your sentiment analysis with comet medium opinion mining with nlp — building and tracking a sentiment analysis model using comet experiment tracking. nlp sentiment analysis comet machine learning" href="https://medium.com/cometheartbeat/tracking-your-sentiment-analysis-with-comet-3f94bd92a84f" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Tracking Your Sentiment Analysis with Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>NLP</span><span>Sentiment Analysis</span><span>Comet</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning" data-s="integrating time series analysis in comet medium how to integrate time series forecasting workflows into comet for experiment tracking and result logging. time series ml comet machine learning" href="https://medium.com/cometheartbeat/integrating-time-series-analysis-in-comet-293d1d0e2b22" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Integrating Time Series Analysis in Comet</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>Time Series</span><span>ML</span><span>Comet</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="machinelearning devtoolsapis" data-s="understanding various cloud services medium how cloud computing works, the various cloud service models, and types of cloud deployment explained clearly. cloud aws azure machine learning dev tools &amp; apis" href="https://medium.com/@oluseyejeremiah/understanding-various-cloud-services-1f113496e9a5" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Understanding Various Cloud Services</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>Cloud</span><span>AWS</span><span>Azure</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="medium" data-t="datasql devtoolsapis" data-s="understanding azure sql elastic pools medium azure sql database and elastic pools explained — scalable, secure, cost-effective cloud database management. azure sql cloud data &amp; sql dev tools &amp; apis" href="https://medium.com/@oluseyejeremiah/understanding-azure-sql-elastic-pools-62f4980e8743" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Understanding Azure SQL Elastic Pools</span><span class="row-plat"><span class="dot" style="background:#8a8a8a"></span>Medium</span></span>
+        <span class="row-tags"><span>Azure</span><span>SQL</span><span>Cloud</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="twilio" data-t="devtoolsapis" data-s="how to implement a robust voice authentication system with go and twilio twilio building a voice-based otp system using twilio programmable voice and go — secure, accessible authentication. voice api go auth dev tools &amp; apis" href="https://www.twilio.com/en-us/blog/implement-robust-voice-authentication-go" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Implement a Robust Voice Authentication System with Go and Twilio</span><span class="row-plat"><span class="dot" style="background:#e0313b"></span>Twilio</span></span>
+        <span class="row-tags"><span>Voice API</span><span>Go</span><span>Auth</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="twilio" data-t="healthcareai llmsgenai devtoolsapis" data-s="creating a health chatbot using twilio and gemini twilio building an intelligent healthcare chatbot with twilio&#x27;s whatsapp api and google gemini ai responses. whatsapp api gemini ai chatbot healthcare ai llms &amp; genai dev tools &amp; apis" href="https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">Creating a Health Chatbot Using Twilio and Gemini</span><span class="row-plat"><span class="dot" style="background:#e0313b"></span>Twilio</span></span>
+        <span class="row-tags"><span>WhatsApp API</span><span>Gemini</span><span>AI Chatbot</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="strapi" data-t="devtoolsapis" data-s="how to build a to-do app using next.js and strapi strapi full-stack to-do app with strapi&#x27;s headless cms and next.js — covering graphql, content types, and crud. next.js strapi graphql dev tools &amp; apis" href="https://strapi.io/blog/how-to-build-a-to-do-app-using-next-js-and-strapi" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Build a To-Do App Using Next.js and Strapi</span><span class="row-plat"><span class="dot" style="background:#5b4fe9"></span>Strapi</span></span>
+        <span class="row-tags"><span>Next.js</span><span>Strapi</span><span>GraphQL</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      <li><a class="row" data-p="strapi" data-t="devtoolsapis" data-s="how to build a hotel management app using strapi and next.js strapi end-to-end hotel booking system with auth, image upload, availability, and room selection using strapi + next.js. next.js strapi full-stack dev tools &amp; apis" href="https://strapi.io/blog/how-to-build-a-hotel-management-app-using-strapi-and-nextjs" target="_blank" rel="noopener">
+        <span class="row-main"><span class="row-title">How to Build a Hotel Management App Using Strapi and Next.js</span><span class="row-plat"><span class="dot" style="background:#5b4fe9"></span>Strapi</span></span>
+        <span class="row-tags"><span>Next.js</span><span>Strapi</span><span>Full-stack</span></span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a></li>
+      </ul>
+      <p class="empty" id="empty">Nothing matches that search. Try a broader term or clear the filters.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Engineer first, then writer</h2>
+        <p>I hold a <strong>BSc in Computer Science</strong> and an <strong>MSc in Data Science</strong> from the University of Ibadan. I build with Python, TensorFlow, LLM APIs and vector databases, and I write for developer audiences at DataCamp, freeCodeCamp, Twilio, Strapi and Hackmamba's clients.</p>
+        <p>I was a Microsoft Learn Student Ambassador and a GDSC core team member, I've taught machine learning through Inventors, and I was a freeCodeCamp Top Contributor in 2023.</p>
+      </div>
+      <div>
+        <p class="eyebrow">How I can help</p>
+        <ul class="offer">
+          <li><i>01</i><b>AI and ML engineering</b><span>Prototypes, evaluation and on-device models, especially for health.</span></li>
+          <li><i>02</i><b>Build-along tutorials</b><span>A working project with your SDK or API, plus the step-by-step guide.</span></li>
+          <li><i>03</i><b>AI and LLM explainers</b><span>Model launches, benchmarks, RAG and agents, tested hands-on.</span></li>
+          <li><i>04</i><b>Docs and guides</b><span>Getting-started guides and integration docs developers actually finish.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Building something in AI or health tech?</h2>
+      <p>I'm open to AI engineering roles, freelance tutorials and technical content for AI, data and developer-tool teams. Tell me what you're working on.</p>
+      <div class="ctas"><a class="btn primary" href="mailto:oluseyejeremiah@gmail.com">Email me</a><a class="btn" href="https://github.com/olujerry" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://x.com/olujerry19" target="_blank" rel="noopener">X</a></div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <span>© 2025 Oluseye Jeremiah Oluwapelumi</span>
-  <div class="fd"><div class="fdot"></div><span>Open to technical writing opportunities</span></div>
+  <div class="wrap">
+    <span>© 2026 Oluseye Jeremiah Oluwapelumi · Lagos, Nigeria · Remote</span>
+    <span>Updated 26 November 2026</span>
+  </div>
 </footer>
 
 <script>
-function filter(p, btn) {
-  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  let n = 0;
-  document.querySelectorAll('#grid .card').forEach(c => {
-    const show = p === 'all' || c.dataset.p === p;
-    c.style.display = show ? 'flex' : 'none';
-    if (show) n++;
-  });
-  document.getElementById('cnt').textContent = n;
-}
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  try{var t=localStorage.getItem('theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  function isDark(){var t=root.getAttribute('data-theme'); return t? t==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;}
+  function icon(){btn.textContent=isDark()?'☀':'☾'; btn.setAttribute('aria-label',isDark()?'Switch to light theme':'Switch to dark theme');}
+  icon();
+  btn.addEventListener('click',function(){var n=isDark()?'light':'dark'; root.setAttribute('data-theme',n); try{localStorage.setItem('theme',n);}catch(e){} icon();});
+
+  var q=document.getElementById('q'), sel=document.getElementById('plat'),
+      chips=[].slice.call(document.querySelectorAll('.chip')),
+      rows=[].slice.call(document.querySelectorAll('.row')), cnt=document.getElementById('cnt'),
+      empty=document.getElementById('empty'), topic='all';
+  function apply(){
+    var term=q.value.trim().toLowerCase(), p=sel.value, n=0;
+    rows.forEach(function(r){
+      var ok=(topic==='all'||(' '+r.dataset.t+' ').indexOf(' '+topic+' ')>-1)
+           &&(p==='all'||r.dataset.p===p)&&(!term||r.dataset.s.indexOf(term)>-1);
+      r.parentNode.style.display=ok?'':'none'; if(ok)n++;
+    });
+    cnt.textContent=n; empty.style.display=n?'none':'block';
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    chips.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false');});
+    c.classList.add('on'); c.setAttribute('aria-pressed','true'); topic=c.dataset.t; apply();
+  });});
+  q.addEventListener('input',apply); sel.addEventListener('change',apply);
+})();
 </script>
 </body>
 </html>

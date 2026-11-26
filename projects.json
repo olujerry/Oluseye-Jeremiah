@@ -1,0 +1,62 @@
+[
+  {
+    "name": "MalarAI",
+    "kicker": "MSc research · Mobile ML",
+    "summary": "An offline Android app that screens blood-smear images for malaria parasites, built for clinics with no reliable internet. EfficientNet-B0 with Grad-CAM explanations, converted to TensorFlow Lite to run on-device.",
+    "stack": [
+      "TensorFlow Lite",
+      "EfficientNet-B0",
+      "Grad-CAM",
+      "Android"
+    ],
+    "links": [
+      {
+        "label": "Code on GitHub",
+        "url": "https://github.com/olujerry/MalarAI"
+      }
+    ],
+    "points": [
+      "Runs fully offline on an Android phone",
+      "Shows a Grad-CAM heatmap for every prediction",
+      "Designed for clinics in low-resource settings"
+    ]
+  },
+  {
+    "name": "Skill Bank",
+    "kicker": "Data collection · Web app",
+    "summary": "A searchable library of 772 AI agent skill repositories. I used Spidra Map to discover candidate repos, cleaned, deduplicated and verified them, then shipped a static React site with in-browser fuzzy search. Built with Meeday.",
+    "stack": [
+      "Spidra Map",
+      "Python",
+      "React",
+      "Vite",
+      "Fuse.js"
+    ],
+    "links": [
+      {
+        "label": "Live site",
+        "url": "https://skillbank-eight.vercel.app/"
+      },
+      {
+        "label": "Read the write-up",
+        "url": "https://dev.to/oluseyej/i-mapped-772-ai-agent-skill-repos-on-github-heres-what-was-actually-in-them-jpn"
+      }
+    ]
+  },
+  {
+    "name": "WhatsApp health chatbot",
+    "kicker": "Tutorial · Twilio blog",
+    "summary": "A health-information chatbot that answers on WhatsApp, using Twilio's WhatsApp API for messaging and Google Gemini for responses. Built end to end, then written up as a step-by-step guide.",
+    "stack": [
+      "Twilio",
+      "WhatsApp API",
+      "Gemini"
+    ],
+    "links": [
+      {
+        "label": "Read the tutorial",
+        "url": "https://www.twilio.com/en-us/blog/developers/community/create-health-chatbot-using-twilio-gemini-step-by-step-guide"
+      }
+    ]
+  }
+]
